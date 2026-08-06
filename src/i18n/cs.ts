@@ -1,0 +1,168 @@
+import { Dictionary } from './types'
+
+export const cs: Dictionary = {
+  locale: 'cs',
+  meta: {
+    title: 'Roubenka Rajenka – ubytování v Českém ráji, Kněžnice u Jičína',
+    description:
+      'Pronájem stylové roubenky v Kněžnici na dohled od Prachovských skal. Až 8 lůžek, zahrada, klid podhůří Českého ráje. Napište si o volný termín.',
+  },
+  nav: {
+    cottage: 'Chalupa',
+    story: 'Příběh',
+    gallery: 'Galerie',
+    surroundings: 'Okolí',
+    pricing: 'Ceník',
+    contact: 'Kontakt',
+    cta: 'Poslat poptávku',
+    switchLabel: 'English',
+    switchHref: '/en',
+    switchLang: 'en',
+  },
+  hero: {
+    eyebrow: 'Kněžnice · Český ráj',
+    title: 'Roubenka Rajenka',
+    lead: 'Poctivá roubená chalupa na kraji Českého ráje, deset minut od Jičína a pár kroků od Prachovských skal. Trámy, kachlová kamna a zahrada, kde večer voní dřevo.',
+    ctaPrimary: 'Poslat poptávku',
+    ctaSecondary: 'Prohlédnout chalupu',
+    imageAlt: 'Ilustrace roubenky za soumraku s rozsvícenou verandou',
+    standInNote: 'Ilustrační obrázek – fotografii doplníme.',
+    facts: ['až 8 hostů', '2 ložnice', 'zahrada s posezením', 'parkování u chalupy'],
+  },
+  cottage: {
+    eyebrow: 'Chalupa',
+    title: 'Roubenka, jak má být',
+    paragraphs: [
+      'Rajenka je tradiční roubenka s bílým spárováním, klenutými okny a šindelovou patinou, kterou jsme citlivě opravili pro pohodlné celoroční bydlení. Uvnitř najdete původní trámy, parkety skládané do stromečku a okna se zelenými rámy, kterými se dívá zahrada dovnitř.',
+      'Chalupa pohodlně ubytuje dvě rodiny nebo partu přátel. Dole je společná světnice s velkým jídelním stolem a plně vybavenou kuchyní, nahoře dvě ložnice. Když se sejde víc lidí, poslouží rozkládací pohovka.',
+    ],
+    amenitiesTitle: 'Co je k dispozici',
+    amenities: [
+      'Plně vybavená kuchyně',
+      'Velký jídelní stůl pro 8 lidí',
+      'Kamna na dřevo',
+      'Zahrada s venkovním posezením',
+      'Parkování přímo u chalupy',
+      'Wi-Fi připojení',
+      'Povlečení a ručníky v ceně',
+      'Vybavení pro malé děti',
+    ],
+    factsTitle: 'V kostce',
+    facts: [
+      { label: 'Kapacita', value: 'až 8 hostů' },
+      { label: 'Ložnice', value: '2 + rozkládací pohovka' },
+      { label: 'Poloha', value: 'Kněžnice, 10 km od Jičína' },
+      { label: 'Provoz', value: 'celoročně' },
+    ],
+  },
+  story: {
+    eyebrow: 'Příběh',
+    title: 'Dům, který pamatuje',
+    paragraphs: [
+      'Roubenka stojí v Kněžnici víc než sto let. Postavili ji místní tesaři z borového dřeva tak, jak se v podhůří Českého ráje stavělo odjakživa – roubené stěny, bílé spáry a valbová střecha proti severnímu větru.',
+      'Když jsme ji převzali, vraceli jsme jí život kousek po kousku: trámy dostaly nový nátěr, okna zpátky svou zelenou, a do světnice se vrátil velký stůl, u kterého se schází celý dům.',
+      'Jméno Rajenka nese po kraji, ve kterém stojí. Ráj je tady na dohled – stačí vyjít z branky a vydat se ke skalám.',
+    ],
+  },
+  gallery: {
+    eyebrow: 'Galerie',
+    title: 'Nahlédněte dovnitř',
+    note: 'Fotogalerii postupně doplňujeme – další fotografie přibudou brzy.',
+    interiorAlt: 'Ilustrace světnice s velkým jídelním stolem, zelenými okny a parketami',
+    interiorLabel: 'Světnice',
+    placeholders: ['Ložnice', 'Kuchyně', 'Koupelna', 'Zahrada', 'Okolí chalupy'],
+    comingSoon: 'foto doplníme',
+  },
+  surroundings: {
+    eyebrow: 'Okolí',
+    title: 'Český ráj za humny',
+    lead: 'Kněžnice leží přímo pod Prachovskými skalami, na půl cesty mezi Jičínem a Turnovem. Většinu výletů zvládnete rovnou od chalupy – pěšky, na kole, nebo pár minut autem.',
+    distanceNote: 'Vzdálenosti jsou orientační, měřeno od chalupy.',
+    places: [
+      {
+        name: 'Prachovské skály',
+        distance: '4 km',
+        description:
+          'Skalní město s vyhlídkami a okruhy pro malé i velké. Na kraj skal dojdete pěšky.',
+      },
+      {
+        name: 'Jičín',
+        distance: '10 km',
+        description:
+          'Pohádkové město Rumcajse – zámek, náměstí s podloubím, restaurace a koupaliště Kníže.',
+      },
+      {
+        name: 'Hrad Trosky',
+        distance: '16 km',
+        description: 'Ikona Českého ráje. Dvě věže na čedičových sucích a výhled na celý kraj.',
+      },
+      {
+        name: 'Hrubá Skála',
+        distance: '17 km',
+        description: 'Zámek na skále a Hruboskalské skalní město, srdce Zlaté stezky Českého ráje.',
+      },
+      {
+        name: 'Turnov a Malá Skála',
+        distance: '20 km',
+        description: 'Řeka Jizera, půjčovny lodí a vodácké hospody – ideální na letní odpoledne.',
+      },
+    ],
+  },
+  pricing: {
+    eyebrow: 'Ceník',
+    title: 'Kolik stojí pobyt',
+    note: 'Ceny jsou orientační – přesnou nabídku vám pošleme obratem na základě termínu a počtu hostů.',
+    rows: [
+      { label: 'Noc mimo sezónu', value: 'od 3 500 Kč', detail: 'celá chalupa, min. 2 noci' },
+      { label: 'Noc v hlavní sezóně', value: 'od 4 500 Kč', detail: 'léto, svátky a prázdniny' },
+      { label: 'Týden', value: 'od 22 000 Kč', detail: 'sobota–sobota' },
+    ],
+    includes: 'V ceně je povlečení, ručníky, dřevo do kamen a parkování. Vratná kauce 5 000 Kč.',
+  },
+  contact: {
+    eyebrow: 'Kontakt a rezervace',
+    title: 'Napište si o termín',
+    lead: 'Pošlete nám termín a počet hostů a my se vám co nejdříve ozveme s potvrzením volných dní a cenou. Rezervace potvrzujeme osobně – žádný automat.',
+    emailLabel: 'E-mail',
+    phoneLabel: 'Telefon',
+    addressLabel: 'Adresa',
+    mapTitle: 'Mapa – Kněžnice, okres Jičín',
+    mapLink: 'Otevřít mapu',
+  },
+  form: {
+    name: 'Jméno a příjmení',
+    email: 'E-mail',
+    phone: 'Telefon',
+    phoneOptional: 'nepovinné',
+    arrival: 'Příjezd',
+    departure: 'Odjezd',
+    guests: 'Počet hostů',
+    guestsOptions: [
+      { value: '1', label: '1 host' },
+      { value: '2', label: '2 hosté' },
+      { value: '3', label: '3 hosté' },
+      { value: '4', label: '4 hosté' },
+      { value: '5', label: '5 hostů' },
+      { value: '6', label: '6 hostů' },
+      { value: '7', label: '7 hostů' },
+      { value: '8', label: '8 hostů' },
+    ],
+    message: 'Zpráva',
+    messagePlaceholder: 'S kým přijedete, na co se chcete zeptat…',
+    submit: 'Odeslat poptávku',
+    sending: 'Odesílám…',
+    success: 'Děkujeme, poptávka je na cestě.',
+    successDetail:
+      'Ozveme se vám co nejdříve s potvrzením termínu. Kopii jsme poslali na váš e-mail.',
+    error: 'Poptávku se nepodařilo odeslat. Zkuste to prosím znovu, nebo nám napište e-mail.',
+  },
+  footer: {
+    tagline: 'Roubenka pod Prachovskými skalami',
+    rights: 'Roubenka Rajenka, Kněžnice',
+  },
+  notFound: {
+    title: 'Stránka nenalezena',
+    body: 'Tady nic není – zkuste to z úvodní stránky.',
+    back: 'Zpět na úvod',
+  },
+}

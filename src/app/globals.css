@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  @apply bg-chalk text-timber font-body antialiased;
+}
+
+::selection {
+  @apply bg-sage-mist text-timber;
+}
+
+:focus-visible {
+  outline: 2px solid #e5a33f;
+  outline-offset: 2px;
+}
+
+.stripe-divider {
+  height: 26px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #2b2018 0px,
+    #2b2018 5px,
+    #faf7f0 5px,
+    #faf7f0 9px
+  );
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delayed {
+  animation: fade-up 0.7s ease-out 0.2s both;
+}

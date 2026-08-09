@@ -123,3 +123,66 @@ body {
   box-shadow: 0 0 10px 3px rgba(229, 163, 63, 0.5);
   animation: firefly-drift 5.5s ease-in-out infinite;
 }
+
+@keyframes dash-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1rem;
+  }
+}
+
+.hero-fact-dash {
+  animation: dash-grow 0.5s ease-out both;
+}
+
+.logo-hand {
+  transform-box: fill-box;
+  transform-origin: 50% 95%;
+  transform: translate(-9px, 18px);
+  animation: hand-hello 75s ease-in-out 9s infinite;
+}
+
+@keyframes hand-hello {
+  0% {
+    transform: translate(-9px, 18px) rotate(0deg);
+  }
+  1% {
+    transform: translate(0, 0) rotate(22deg);
+  }
+  1.8% {
+    transform: translate(0, 0) rotate(4deg);
+  }
+  2.6% {
+    transform: translate(0, 0) rotate(36deg);
+  }
+  3.4% {
+    transform: translate(0, 0) rotate(4deg);
+  }
+  4.2% {
+    transform: translate(0, 0) rotate(36deg);
+  }
+  5% {
+    transform: translate(0, 0) rotate(22deg);
+  }
+  6.6%,
+  100% {
+    transform: translate(-9px, 18px) rotate(0deg);
+  }
+}
+
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+    transform: scale(0.965);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-lightbox-in {
+  animation: lightbox-in 0.25s ease-out both;
+}

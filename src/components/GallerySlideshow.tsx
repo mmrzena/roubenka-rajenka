@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Dictionary } from '@/i18n/types'
 import ArchFrame from './ArchFrame'
 
@@ -166,66 +167,68 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
         ))}
       </div>
 
-      {fullscreen && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={photo.label}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-timber/95 p-4"
-          onClick={(event) => {
-            if (event.target === event.currentTarget) setFullscreen(false)
-          }}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            key={photo.src}
-            src={photo.src}
-            alt={photo.alt}
-            className="animate-slide-fade max-h-[86vh] max-w-full object-contain"
-          />
-          <p className="mt-4 text-chalk">
-            <span className="font-display text-lg">{photo.label}</span>
-            <span className="ml-3 text-sm text-chalk/70">
-              {index + 1} / {photos.length}
-            </span>
-          </p>
+      {fullscreen &&
+        createPortal(
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={photo.label}
+            className="animate-lightbox-in fixed inset-0 z-50 flex flex-col items-center justify-center bg-timber/95 p-4"
+            onClick={(event) => {
+              if (event.target === event.currentTarget) setFullscreen(false)
+            }}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              key={photo.src}
+              src={photo.src}
+              alt={photo.alt}
+              className="animate-slide-fade max-h-[86vh] max-w-full object-contain"
+            />
+            <p className="mt-4 text-chalk">
+              <span className="font-display text-lg">{photo.label}</span>
+              <span className="ml-3 text-sm text-chalk/70">
+                {index + 1} / {photos.length}
+              </span>
+            </p>
 
-          <button
-            type="button"
-            onClick={() => setFullscreen(false)}
-            aria-label={gallery.closeLabel}
-            className="absolute right-4 top-4 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
-          >
-            <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
-              <path
-                d="M6 6l12 12M18 6L6 18"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
-          <button
-            type="button"
-            onClick={() => goTo(index - 1)}
-            aria-label={gallery.prevLabel}
-            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
-          >
-            <ArrowIcon direction="left" />
-          </button>
-          <button
-            type="button"
-            onClick={() => goTo(index + 1)}
-            aria-label={gallery.nextLabel}
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
-          >
-            <ArrowIcon direction="right" />
-          </button>
-        </div>
-      )}
+            <button
+              type="button"
+              onClick={() => setFullscreen(false)}
+              aria-label={gallery.closeLabel}
+              className="absolute right-4 top-4 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
+            >
+              <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
+                <path
+                  d="M6 6l12 12M18 6L6 18"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => goTo(index - 1)}
+              aria-label={gallery.prevLabel}
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
+            >
+              <ArrowIcon direction="left" />
+            </button>
+            <button
+              type="button"
+              onClick={() => goTo(index + 1)}
+              aria-label={gallery.nextLabel}
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
+            >
+              <ArrowIcon direction="right" />
+            </button>
+          </div>,
+          document.body,
+        )}
     </div>
   )
 }

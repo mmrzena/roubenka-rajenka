@@ -30,9 +30,13 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         </div>
 
         <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
-          {dict.hero.facts.map((fact) => (
+          {dict.hero.facts.map((fact, index) => (
             <li key={fact} className="flex items-center gap-2 text-sm text-timber-faded">
-              <span aria-hidden="true" className="h-1.5 w-4 rounded-sm bg-sage" />
+              <span
+                aria-hidden="true"
+                className="hero-fact-dash h-1.5 w-4 rounded-sm bg-sage"
+                style={{ animationDelay: `${0.7 + index * 0.15}s` }}
+              />
               {fact}
             </li>
           ))}
@@ -55,11 +59,19 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           aria-hidden="true"
           className="absolute -bottom-8 -left-3 w-28 -rotate-6 rounded-md border-4 border-chalk bg-chalk shadow-[0_10px_30px_-10px_rgba(43,32,24,0.45)] transition-transform duration-300 ease-out hover:-rotate-2 hover:scale-105 sm:-left-6 sm:w-36"
         />
-        <div aria-hidden="true" className="pointer-events-none absolute -bottom-10 -left-4 h-48 w-44">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-10 -left-4 h-48 w-44"
+        >
           <span className="firefly" style={{ left: '30%', top: '62%' }} />
           <span
             className="firefly"
-            style={{ left: '55%', top: '70%', animationDelay: '1.4s', ['--drift-x' as string]: '-16px' }}
+            style={{
+              left: '55%',
+              top: '70%',
+              animationDelay: '1.4s',
+              ['--drift-x' as string]: '-16px',
+            }}
           />
           <span
             className="firefly"
@@ -67,11 +79,22 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           />
           <span
             className="firefly"
-            style={{ left: '70%', top: '48%', animationDelay: '3.8s', ['--drift-x' as string]: '-24px', animationDuration: '7s' }}
+            style={{
+              left: '70%',
+              top: '48%',
+              animationDelay: '3.8s',
+              ['--drift-x' as string]: '-24px',
+              animationDuration: '7s',
+            }}
           />
           <span
             className="firefly"
-            style={{ left: '44%', top: '40%', animationDelay: '5s', ['--drift-x' as string]: '20px' }}
+            style={{
+              left: '44%',
+              top: '40%',
+              animationDelay: '5s',
+              ['--drift-x' as string]: '20px',
+            }}
           />
         </div>
       </figure>

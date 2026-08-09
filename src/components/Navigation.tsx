@@ -4,7 +4,6 @@ import { SITE_NAME } from '@/lib/site'
 import LogoMark from './LogoMark'
 
 export default function Navigation({ dict }: { dict: Dictionary }) {
-  const homeHref = dict.locale === 'cs' ? '/' : '/en'
   const links = [
     { href: '#chalupa', label: dict.nav.cottage },
     { href: '#pribeh', label: dict.nav.story },
@@ -17,10 +16,10 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
   return (
     <header className="sticky top-0 z-50 bg-chalk/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href={homeHref} className="flex items-center gap-2.5">
+        <a href="#top" className="group flex items-center gap-2.5">
           <LogoMark className="h-7 w-7" />
           <span className="font-display text-lg font-semibold text-timber">{SITE_NAME}</span>
-        </Link>
+        </a>
 
         <div className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (

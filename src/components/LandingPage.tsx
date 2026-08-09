@@ -7,11 +7,13 @@ import Hero from './Hero'
 import Navigation from './Navigation'
 import PricingSection from './PricingSection'
 import StorySection from './StorySection'
+import StructuredData from './StructuredData'
 import SurroundingsSection from './SurroundingsSection'
 
 export default function LandingPage({ dict }: { dict: Dictionary }) {
   return (
     <>
+      <StructuredData dict={dict} />
       <Navigation dict={dict} />
       <main>
         <Hero dict={dict} />

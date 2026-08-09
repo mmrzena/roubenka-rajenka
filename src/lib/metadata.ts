@@ -22,6 +22,19 @@ export function buildMetadata(dict: Dictionary): Metadata {
       siteName: SITE_NAME,
       locale: dict.locale === 'cs' ? 'cs_CZ' : 'en_GB',
       type: 'website',
+      images: [
+        {
+          url: '/images/web/hero.jpg',
+          width: 1800,
+          height: 1350,
+          alt: dict.hero.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: dict.meta.title,
+      description: dict.meta.description,
       images: ['/images/web/hero.jpg'],
     },
   }

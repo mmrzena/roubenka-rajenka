@@ -229,6 +229,12 @@ export const cs: Dictionary = {
             distance: '6,5 km',
             description: 'Kaufland, Lidl, Tesco, Billa a řada restaurací.',
           },
+          {
+            name: 'Rohlík.cz',
+            distance: 'rozvoz',
+            description:
+              'Online supermarket doveze nákup až ke dveřím chalupy – ideální na velký nákup na začátek pobytu.',
+          },
         ],
       },
       {

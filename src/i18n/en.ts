@@ -103,6 +103,26 @@ export const en: Dictionary = {
         alt: 'The second attic bedroom with four beds',
       },
       {
+        src: '/images/web/loznice-podkrovi.jpg',
+        label: 'Under the roof',
+        alt: 'An attic bedroom with a double bed and a single bed',
+      },
+      {
+        src: '/images/web/loznice-postel.jpg',
+        label: 'Double bed',
+        alt: 'A double bed with new mattresses under the sloped ceiling',
+      },
+      {
+        src: '/images/web/loznice-okna.jpg',
+        label: 'Beds by the windows',
+        alt: 'Beds by the windows looking out into greenery',
+      },
+      {
+        src: '/images/web/loznice-skrine.jpg',
+        label: 'Built-in wardrobes',
+        alt: 'Built-in wardrobes in an attic bedroom',
+      },
+      {
         src: '/images/web/postylka.jpg',
         label: 'Baby cot',
         alt: 'A bedroom with a baby cot',

@@ -103,6 +103,26 @@ export const cs: Dictionary = {
         alt: 'Druhá podkrovní ložnice se čtyřmi lůžky',
       },
       {
+        src: '/images/web/loznice-podkrovi.jpg',
+        label: 'Pod krovem',
+        alt: 'Podkrovní ložnice s manželskou postelí a samostatným lůžkem',
+      },
+      {
+        src: '/images/web/loznice-postel.jpg',
+        label: 'Manželská postel',
+        alt: 'Manželská postel s novými matracemi pod šikminou',
+      },
+      {
+        src: '/images/web/loznice-okna.jpg',
+        label: 'Lůžka u oken',
+        alt: 'Lůžka u oken s výhledem do zeleně',
+      },
+      {
+        src: '/images/web/loznice-skrine.jpg',
+        label: 'Vestavěné skříně',
+        alt: 'Vestavěné skříně v podkrovní ložnici',
+      },
+      {
         src: '/images/web/postylka.jpg',
         label: 'Dětská postýlka',
         alt: 'Ložnice s dětskou postýlkou',

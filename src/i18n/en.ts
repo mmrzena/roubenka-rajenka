@@ -30,7 +30,7 @@ export const en: Dictionary = {
   },
   cottage: {
     eyebrow: 'The cottage',
-    title: 'A roubenka the way it should be',
+    title: 'A log cottage the way it should be',
     imageAlt: 'The front of the timbered cottage with its red roof and white-limed joints',
     paragraphs: [
       'The heart of the cottage is the světnice – the traditional living room – dominated by an oak table with four chairs and a bench seating the full house. A fireplace sets the mood, and a comfortable daybed and a smart TV are there for lazy evenings. Also downstairs are a fully equipped kitchen and, off the entry hall, a bathroom with a shower, toilet and washing machine.',
@@ -65,7 +65,7 @@ export const en: Dictionary = {
     eyebrow: 'History',
     title: 'A house that remembers',
     paragraphs: [
-      'Local carpenters built the cottage from pine over a hundred years ago – exactly the way houses were always built in the foothills of Bohemian Paradise. It has everything a true roubenka should: log walls, white-limed joints, massive beams and a hipped roof that shields the house from the north wind.',
+      'Local carpenters built the cottage from pine over a hundred years ago – exactly the way houses were always built in the foothills of Bohemian Paradise. It has everything a true log cottage should: log walls, white-limed joints, massive beams and a hipped roof that shields the house from the north wind.',
       'The authentic charm of the old house lives on in the preserved low doorways between the rooms. And it takes only a few steps from the cottage for the breathtaking, iconic view of Trosky Castle to open up before you.',
     ],
   },

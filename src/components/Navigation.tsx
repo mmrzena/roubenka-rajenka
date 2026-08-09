@@ -15,7 +15,7 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
   ]
 
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-timber bg-chalk/90 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-chalk/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href={homeHref} className="flex items-center gap-2.5">
           <LogoMark className="h-7 w-7" />
@@ -50,6 +50,7 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
           </a>
         </div>
       </nav>
+      <div aria-hidden="true" className="stripe-divider" />
     </header>
   )
 }

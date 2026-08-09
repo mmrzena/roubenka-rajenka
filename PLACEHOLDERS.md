@@ -21,8 +21,8 @@ site-wide constants live in `src/lib/site.ts`.
 ## Still to confirm with the owner
 
 - [ ] **Email** — `info@roubenkarajenka.cz` is invented (`src/lib/site.ts` → `CONTACT_EMAIL`)
-- [ ] **Exact address / house number** if you want it shown (`ADDRESS`, `MAP_EMBED_URL`).
-      Photo image00002 suggests house no. 40 — confirm before publishing.
+- [x] **Address** — Kněžnice 40 (confirmed 2026-08-09); shown in contact, map links and
+      structured data.
 - [ ] **"Mimo sezónu" months** — the price list defines summer (1.5.–30.9.) and winter
       (1.12.–31.3.); the site labels the rest (April, October, November) as off season.
       Confirm that reading.

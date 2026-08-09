@@ -18,6 +18,7 @@ export default function StructuredData({ dict }: { dict: Dictionary }) {
     ],
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Kněžnice 40',
       addressLocality: 'Kněžnice',
       addressRegion: 'Královéhradecký kraj',
       addressCountry: 'CZ',

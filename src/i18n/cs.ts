@@ -99,7 +99,7 @@ export const cs: Dictionary = {
       },
       {
         src: '/images/web/loznice-podkrovi.jpg',
-        label: 'První ložnice ode dveří',
+        label: 'První ložnice – ode dveří',
         alt: 'Pohled do první ložnice s manželskou postelí a samostatným lůžkem',
       },
       {

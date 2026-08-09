@@ -99,7 +99,7 @@ export const en: Dictionary = {
       },
       {
         src: '/images/web/loznice-podkrovi.jpg',
-        label: 'First bedroom from the doorway',
+        label: 'First bedroom – from the doorway',
         alt: 'The first bedroom with a double bed and a single bed',
       },
       {

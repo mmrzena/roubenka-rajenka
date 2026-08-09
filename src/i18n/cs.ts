@@ -25,7 +25,7 @@ export const cs: Dictionary = {
     lead: 'Krásná a útulná roubená chalupa až pro 8 osob v klidné části Kněžnice, kousek od lesa. Postavili ji místní tesaři před více než sto lety – a pár kroků od stavení se otevírá ikonický pohled na Trosky.',
     ctaPrimary: 'Poslat poptávku',
     ctaSecondary: 'Prohlédnout chalupu',
-    imageAlt: 'Ilustrace roubenky za soumraku s rozsvícenou verandou',
+    imageAlt: 'Roubenka Rájenka – chalupa s červenou střechou a krytým posezením před vchodem',
     facts: ['až 8 hostů', '2 ložnice + světnice', 'zahrada s bazénem', 'parkování na pozemku'],
   },
   cottage: {

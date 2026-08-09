@@ -25,7 +25,7 @@ export const en: Dictionary = {
     lead: 'A beautiful, cosy log cottage for up to 8 guests in a quiet corner of Kněžnice, close to the forest. Local carpenters built it over a hundred years ago – and the iconic view of Trosky Castle opens up just a few steps from the house.',
     ctaPrimary: 'Send an inquiry',
     ctaSecondary: 'See the cottage',
-    imageAlt: 'Illustration of the cottage at dusk with the porch light on',
+    imageAlt: 'Roubenka Rájenka – the cottage with a red roof and a covered porch seating area',
     facts: ['sleeps up to 8', '2 bedrooms + living room', 'garden with a pool', 'parking on site'],
   },
   cottage: {

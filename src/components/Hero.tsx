@@ -39,7 +39,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         </ul>
       </div>
 
-      <div className="animate-fade-up-delayed">
+      <figure className="animate-fade-up-delayed relative">
         <ArchFrame>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -48,7 +48,14 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             className="aspect-[4/5] w-full object-cover sm:aspect-[5/6]"
           />
         </ArchFrame>
-      </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={IMAGES.illustration}
+          alt=""
+          aria-hidden="true"
+          className="absolute -bottom-8 -left-3 w-28 -rotate-6 rounded-md border-4 border-chalk bg-chalk shadow-[0_10px_30px_-10px_rgba(43,32,24,0.45)] sm:-left-6 sm:w-36"
+        />
+      </figure>
     </section>
   )
 }

@@ -83,14 +83,29 @@ export const cs: Dictionary = {
         alt: 'Světnice s dubovým stolem, lavicí a okny se zelenými rámy',
       },
       {
+        src: '/images/web/svetnice-celek.jpg',
+        label: 'Světnice – celkový pohled',
+        alt: 'Celkový pohled na světnici s jídelním stolem uprostřed',
+      },
+      {
+        src: '/images/web/svetnice-tramy.jpg',
+        label: 'Světnice – pod trámy',
+        alt: 'Pohled od jídelního stolu přes válendu na masivní trámy',
+      },
+      {
         src: '/images/web/svetnice-valenda.jpg',
-        label: 'Válenda u krbu',
+        label: 'Světnice – válenda u krbu',
         alt: 'Pohodlná válenda a krb ve světnici',
       },
       {
         src: '/images/web/kuchyne.jpg',
         label: 'Kuchyň',
         alt: 'Kompletně vybavená kuchyň',
+      },
+      {
+        src: '/images/web/podkrovi.jpg',
+        label: 'Podkroví',
+        alt: 'Podkrovní chodba se střešními okny a vstupem do ložnice',
       },
       {
         src: '/images/web/loznice-1.jpg',
@@ -116,6 +131,11 @@ export const cs: Dictionary = {
         src: '/images/web/loznice-2.jpg',
         label: 'Druhá ložnice',
         alt: 'Druhá podkrovní ložnice se čtyřmi lůžky',
+      },
+      {
+        src: '/images/web/loznice-2-celek.jpg',
+        label: 'Druhá ložnice – celkový pohled',
+        alt: 'Celkový pohled na druhou ložnici s lůžky a dětskou postýlkou',
       },
       {
         src: '/images/web/loznice-skrine.jpg',

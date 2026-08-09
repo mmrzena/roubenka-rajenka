@@ -83,14 +83,29 @@ export const en: Dictionary = {
         alt: 'The living room with an oak table, a bench and green-framed windows',
       },
       {
+        src: '/images/web/svetnice-celek.jpg',
+        label: 'Living room – full view',
+        alt: 'A full view of the living room with the dining table in the middle',
+      },
+      {
+        src: '/images/web/svetnice-tramy.jpg',
+        label: 'Living room – under the beams',
+        alt: 'Looking from the dining table across the daybed at the massive beams',
+      },
+      {
         src: '/images/web/svetnice-valenda.jpg',
-        label: 'Daybed by the fireplace',
+        label: 'Living room – daybed by the fireplace',
         alt: 'A comfortable daybed and the fireplace in the living room',
       },
       {
         src: '/images/web/kuchyne.jpg',
         label: 'Kitchen',
         alt: 'The fully equipped kitchen',
+      },
+      {
+        src: '/images/web/podkrovi.jpg',
+        label: 'The attic landing',
+        alt: 'The attic landing with skylights and a doorway into a bedroom',
       },
       {
         src: '/images/web/loznice-1.jpg',
@@ -116,6 +131,11 @@ export const en: Dictionary = {
         src: '/images/web/loznice-2.jpg',
         label: 'Second bedroom',
         alt: 'The second attic bedroom with four beds',
+      },
+      {
+        src: '/images/web/loznice-2-celek.jpg',
+        label: 'Second bedroom – full view',
+        alt: 'A full view of the second bedroom with the beds and the baby cot',
       },
       {
         src: '/images/web/loznice-skrine.jpg',

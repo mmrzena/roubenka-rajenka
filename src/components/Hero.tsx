@@ -4,8 +4,8 @@ import ArchFrame from './ArchFrame'
 
 export default function Hero({ dict }: { dict: Dictionary }) {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-20">
-      <div className="max-w-3xl animate-fade-up">
+    <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-20">
+      <div className="animate-fade-up">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-sage-dark">
           {dict.hero.eyebrow}
         </p>
@@ -39,13 +39,13 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         </ul>
       </div>
 
-      <div className="mt-10 animate-fade-up-delayed md:mt-14">
+      <div className="animate-fade-up-delayed">
         <ArchFrame>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={IMAGES.hero}
             alt={dict.hero.imageAlt}
-            className="aspect-[4/3] w-full object-cover sm:aspect-[16/9]"
+            className="aspect-[4/5] w-full object-cover sm:aspect-[5/6]"
           />
         </ArchFrame>
       </div>

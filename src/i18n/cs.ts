@@ -230,7 +230,7 @@ export const cs: Dictionary = {
             description: 'Kaufland, Lidl, Tesco, Billa a řada restaurací.',
           },
           {
-            name: 'Rohlík.cz',
+            name: 'Rohlík k nám vozí',
             distance: 'rozvoz',
             description:
               'Online supermarket doveze nákup až ke dveřím chalupy – ideální na velký nákup na začátek pobytu.',

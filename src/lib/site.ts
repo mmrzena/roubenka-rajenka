@@ -8,7 +8,7 @@ export const ADDRESS = 'Kněžnice 40, okres Jičín, Český ráj'
 
 export const IMAGES = {
   hero: '/images/web/hero.jpg',
-  heroIllustration: '/images/hero.svg',
+  illustration: '/images/hero.svg',
   cottage: '/images/web/exterier.jpg',
 }
 

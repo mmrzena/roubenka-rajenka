@@ -25,11 +25,13 @@ export interface Dictionary {
     ctaPrimary: string
     ctaSecondary: string
     imageAlt: string
+    imageNote: string
     facts: string[]
   }
   cottage: {
     eyebrow: string
     title: string
+    imageAlt: string
     paragraphs: string[]
     amenitiesTitle: string
     amenities: string[]

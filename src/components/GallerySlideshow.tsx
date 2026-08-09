@@ -36,6 +36,7 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
   const [interacted, setInteracted] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
   const touchStartX = useRef<number | null>(null)
+  const stripRef = useRef<HTMLDivElement | null>(null)
   const thumbRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   const goTo = useCallback(
@@ -74,7 +75,14 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
       const img = new Image()
       img.src = photos[i].src
     })
-    thumbRefs.current[index]?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+    const strip = stripRef.current
+    const thumb = thumbRefs.current[index]
+    if (strip && thumb) {
+      strip.scrollTo({
+        left: thumb.offsetLeft - strip.clientWidth / 2 + thumb.clientWidth / 2,
+        behavior: 'smooth',
+      })
+    }
   }, [index, photos])
 
   const photo = photos[index]
@@ -147,7 +155,7 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
         </span>
       </p>
 
-      <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
+      <div ref={stripRef} className="relative mt-5 flex gap-3 overflow-x-auto pb-2">
         {photos.map((thumb, i) => (
           <button
             key={thumb.src}

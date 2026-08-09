@@ -1,4 +1,6 @@
 import { Dictionary } from '@/i18n/types'
+import { IMAGES } from '@/lib/site'
+import ArchFrame from './ArchFrame'
 import SectionHeading from './SectionHeading'
 
 export default function CottageSection({ dict }: { dict: Dictionary }) {
@@ -27,20 +29,31 @@ export default function CottageSection({ dict }: { dict: Dictionary }) {
           </ul>
         </div>
 
-        <aside className="h-fit rounded-lg border border-sage/40 bg-sage-mist p-6">
-          <h3 className="mb-5 font-display text-xl font-medium text-timber">
-            {dict.cottage.factsTitle}
-          </h3>
-          <dl className="space-y-4">
-            {dict.cottage.facts.map((fact) => (
-              <div key={fact.label}>
-                <dt className="text-xs font-bold uppercase tracking-[0.15em] text-sage-dark">
-                  {fact.label}
-                </dt>
-                <dd className="mt-0.5 text-lg text-timber">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
+        <aside className="h-fit">
+          <ArchFrame>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={IMAGES.cottage}
+              alt={dict.cottage.imageAlt}
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </ArchFrame>
+          <div className="mt-6 rounded-lg border border-sage/40 bg-sage-mist p-6">
+            <h3 className="mb-5 font-display text-xl font-medium text-timber">
+              {dict.cottage.factsTitle}
+            </h3>
+            <dl className="space-y-4">
+              {dict.cottage.facts.map((fact) => (
+                <div key={fact.label}>
+                  <dt className="text-xs font-bold uppercase tracking-[0.15em] text-sage-dark">
+                    {fact.label}
+                  </dt>
+                  <dd className="mt-0.5 text-lg text-timber">{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </aside>
       </div>
     </section>

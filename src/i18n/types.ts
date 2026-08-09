@@ -44,6 +44,10 @@ export interface Dictionary {
   gallery: {
     eyebrow: string
     title: string
+    prevLabel: string
+    nextLabel: string
+    openLabel: string
+    closeLabel: string
     photos: { src: string; label: string; alt: string }[]
   }
   surroundings: {

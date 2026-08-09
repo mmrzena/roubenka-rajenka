@@ -3,13 +3,13 @@ import { Dictionary } from './types'
 export const en: Dictionary = {
   locale: 'en',
   meta: {
-    title: 'Roubenka Rajenka – timbered cottage in Bohemian Paradise, near Jičín',
+    title: 'Roubenka Rájenka – timbered cottage in Bohemian Paradise, near Jičín',
     description:
       'Rent a traditional Czech log cottage for up to 8 guests in Kněžnice, right in Bohemian Paradise. Garden with a pool, pergola and fire pit, Trosky Castle in view. Ask about your dates.',
   },
   nav: {
     cottage: 'The cottage',
-    story: 'Story',
+    story: 'History',
     gallery: 'Gallery',
     surroundings: 'Around',
     pricing: 'Rates',
@@ -21,12 +21,12 @@ export const en: Dictionary = {
   },
   hero: {
     eyebrow: 'Kněžnice · Bohemian Paradise',
-    title: 'Roubenka Rajenka',
+    title: 'Roubenka Rájenka',
     lead: 'A beautiful, cosy log cottage for up to 8 guests in a quiet corner of Kněžnice, close to the forest. Local carpenters built it over a hundred years ago – and the iconic view of Trosky Castle opens up just a few steps from the house.',
     ctaPrimary: 'Send an inquiry',
     ctaSecondary: 'See the cottage',
     imageAlt:
-      'Roubenka Rajenka – a timbered cottage with a red roof and a covered porch seating area',
+      'Roubenka Rájenka – a timbered cottage with a red roof and a covered porch seating area',
     facts: ['sleeps up to 8', '2 bedrooms + living room', 'garden with a pool', 'parking on site'],
   },
   cottage: {
@@ -62,7 +62,7 @@ export const en: Dictionary = {
     ],
   },
   story: {
-    eyebrow: 'Story',
+    eyebrow: 'History',
     title: 'A house that remembers',
     paragraphs: [
       'Local carpenters built the cottage from pine over a hundred years ago – exactly the way houses were always built in the foothills of Bohemian Paradise. It has everything a true roubenka should: log walls, white-limed joints, massive beams and a hipped roof that shields the house from the north wind.',
@@ -72,6 +72,10 @@ export const en: Dictionary = {
   gallery: {
     eyebrow: 'Gallery',
     title: 'Have a look inside',
+    prevLabel: 'Previous photo',
+    nextLabel: 'Next photo',
+    openLabel: 'View full screen',
+    closeLabel: 'Close',
     photos: [
       {
         src: '/images/web/svetnice.jpg',
@@ -114,14 +118,29 @@ export const en: Dictionary = {
         alt: 'The staircase with hand-cut treads leading to the attic',
       },
       {
+        src: '/images/web/zadveri.jpg',
+        label: 'Entry hall',
+        alt: 'The wood-panelled entry hall looking out to the pergola',
+      },
+      {
         src: '/images/web/exterier.jpg',
         label: 'The cottage',
         alt: 'The timbered cottage with a red roof and white-limed joints',
       },
       {
+        src: '/images/web/zahrada.jpg',
+        label: 'Garden',
+        alt: 'The garden by the cottage with greenery all around',
+      },
+      {
         src: '/images/web/pergola.jpg',
         label: 'Pergola',
         alt: 'The roofed pergola with garden seating',
+      },
+      {
+        src: '/images/web/ohniste.jpg',
+        label: 'Fire pit',
+        alt: 'The swing bench and fire pit in the garden',
       },
       {
         src: '/images/web/bazen.jpg',
@@ -394,7 +413,7 @@ export const en: Dictionary = {
   },
   footer: {
     tagline: 'A timbered cottage with Trosky Castle in view',
-    rights: 'Roubenka Rajenka, Kněžnice',
+    rights: 'Roubenka Rájenka, Kněžnice',
   },
   notFound: {
     title: 'Page not found',

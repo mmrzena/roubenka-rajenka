@@ -1,4 +1,4 @@
-# Roubenka Rajenka
+# Roubenka Rájenka
 
 Marketing one-pager for a timbered cottage (roubenka) in Kněžnice, Český ráj.
 Czech at `/`, English at `/en`. Built with Next.js App Router, Tailwind CSS and

@@ -3,13 +3,13 @@ import { Dictionary } from './types'
 export const cs: Dictionary = {
   locale: 'cs',
   meta: {
-    title: 'Roubenka Rajenka – ubytování v Českém ráji, Kněžnice u Jičína',
+    title: 'Roubenka Rájenka – ubytování v Českém ráji, Kněžnice u Jičína',
     description:
       'Pronájem roubené chalupy až pro 8 osob v Kněžnici přímo v Českém ráji. Zahrada s bazénem, pergolou a ohništěm, výhled na Trosky kousek od branky. Napište si o volný termín.',
   },
   nav: {
     cottage: 'Chalupa',
-    story: 'Příběh',
+    story: 'Historie',
     gallery: 'Galerie',
     surroundings: 'Okolí',
     pricing: 'Ceník',
@@ -21,12 +21,12 @@ export const cs: Dictionary = {
   },
   hero: {
     eyebrow: 'Kněžnice · Český ráj',
-    title: 'Roubenka Rajenka',
+    title: 'Roubenka Rájenka',
     lead: 'Krásná a útulná roubená chalupa až pro 8 osob v klidné části Kněžnice, kousek od lesa. Postavili ji místní tesaři před více než sto lety – a pár kroků od stavení se otevírá ikonický pohled na Trosky.',
     ctaPrimary: 'Poslat poptávku',
     ctaSecondary: 'Prohlédnout chalupu',
     imageAlt:
-      'Roubenka Rajenka – roubená chalupa s červenou střechou a krytým posezením před vchodem',
+      'Roubenka Rájenka – roubená chalupa s červenou střechou a krytým posezením před vchodem',
     facts: ['až 8 hostů', '2 ložnice + světnice', 'zahrada s bazénem', 'parkování na pozemku'],
   },
   cottage: {
@@ -62,7 +62,7 @@ export const cs: Dictionary = {
     ],
   },
   story: {
-    eyebrow: 'Příběh',
+    eyebrow: 'Historie',
     title: 'Dům, který pamatuje',
     paragraphs: [
       'Chalupu postavili místní tesaři z borového dřeva před více než sto lety – přesně tak, jak se v podhůří Českého ráje stavělo odjakživa. Nechybí roubené stěny, bílé spáry, masivní trámy ani valbová střecha, která dům chrání proti severnímu větru.',
@@ -72,6 +72,10 @@ export const cs: Dictionary = {
   gallery: {
     eyebrow: 'Galerie',
     title: 'Nahlédněte dovnitř',
+    prevLabel: 'Předchozí fotografie',
+    nextLabel: 'Další fotografie',
+    openLabel: 'Zobrazit na celou obrazovku',
+    closeLabel: 'Zavřít',
     photos: [
       {
         src: '/images/web/svetnice.jpg',
@@ -114,14 +118,29 @@ export const cs: Dictionary = {
         alt: 'Schodiště s vykrojenými nášlapy do podkroví',
       },
       {
+        src: '/images/web/zadveri.jpg',
+        label: 'Zádveří',
+        alt: 'Dřevem obložené zádveří s výhledem na pergolu',
+      },
+      {
         src: '/images/web/exterier.jpg',
         label: 'Chalupa',
         alt: 'Roubenka s červenou střechou a bílými spárami',
       },
       {
+        src: '/images/web/zahrada.jpg',
+        label: 'Zahrada',
+        alt: 'Zahrada u chalupy s výhledem do zeleně',
+      },
+      {
         src: '/images/web/pergola.jpg',
         label: 'Pergola',
         alt: 'Zastřešená pergola s posezením na zahradě',
+      },
+      {
+        src: '/images/web/ohniste.jpg',
+        label: 'Ohniště',
+        alt: 'Houpačka a ohniště na zahradě',
       },
       {
         src: '/images/web/bazen.jpg',
@@ -386,7 +405,7 @@ export const cs: Dictionary = {
   },
   footer: {
     tagline: 'Roubenka na dohled od Trosek',
-    rights: 'Roubenka Rajenka, Kněžnice',
+    rights: 'Roubenka Rájenka, Kněžnice',
   },
   notFound: {
     title: 'Stránka nenalezena',

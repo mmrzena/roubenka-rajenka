@@ -163,7 +163,7 @@ function ownerEmailHtml(data: InquiryData): string {
 
 const confirmationCopy = {
   cs: {
-    subject: 'Potvrzení přijetí poptávky – Roubenka Rajenka',
+    subject: 'Potvrzení přijetí poptávky – Roubenka Rájenka',
     heading: 'Děkujeme za vaši poptávku',
     body: 'přijali jsme vaši poptávku ubytování a co nejdříve se vám ozveme s potvrzením volného termínu a cenou.',
     summary: 'Shrnutí poptávky:',
@@ -173,7 +173,7 @@ const confirmationCopy = {
     greeting: 'Dobrý den',
   },
   en: {
-    subject: 'Inquiry received – Roubenka Rajenka',
+    subject: 'Inquiry received – Roubenka Rájenka',
     heading: 'Thank you for your inquiry',
     body: 'we have received your accommodation inquiry and will get back to you shortly with availability and a price.',
     summary: 'Inquiry summary:',

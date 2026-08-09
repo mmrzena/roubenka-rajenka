@@ -47,5 +47,5 @@ The form logs to console until SMTP is configured. Set in Vercel:
 
 - [ ] Availability calendar — deliberately skipped at launch. It slots into the
       right-hand column of `ContactSection.tsx`, above the map.
-- [ ] Photo lightbox / full gallery — 24 more owner photos are available locally
-      (bedrooms details, garden, stairs) if a bigger gallery is ever wanted.
+- [ ] More photos — the gallery slideshow holds 15 of the 37 owner photos; the rest
+      (bedroom details, kitchen details, landing) are available locally if wanted.

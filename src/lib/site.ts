@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://roubenkarajenka.cz'
-export const SITE_NAME = 'Roubenka Rajenka'
+export const SITE_NAME = 'Roubenka Rájenka'
 
 export const CONTACT_EMAIL = 'info@roubenkarajenka.cz'
 export const CONTACT_PHONE = '+420 776 323 586'

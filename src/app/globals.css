@@ -62,3 +62,16 @@ body {
 .animate-fade-up-delayed {
   animation: fade-up 0.7s ease-out 0.2s both;
 }
+
+@keyframes slide-fade {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-fade {
+  animation: slide-fade 0.45s ease-out both;
+}

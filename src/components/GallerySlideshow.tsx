@@ -108,7 +108,7 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
               key={photo.src}
               src={photo.src}
               alt={photo.alt}
-              className="animate-slide-fade aspect-[4/3] w-full object-cover sm:aspect-[3/2]"
+              className="animate-slide-fade aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.04] sm:aspect-[3/2]"
             />
           </button>
         </ArchFrame>

@@ -50,7 +50,7 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
           </a>
         </div>
       </nav>
-      <div aria-hidden="true" className="stripe-divider" />
+      <div aria-hidden="true" className="stripe-divider-thin" />
     </header>
   )
 }

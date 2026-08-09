@@ -44,6 +44,17 @@ body {
   );
 }
 
+.stripe-divider-thin {
+  height: 14px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #2b2018 0px,
+    #2b2018 5px,
+    #faf7f0 5px,
+    #faf7f0 9px
+  );
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;

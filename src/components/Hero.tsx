@@ -39,7 +39,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         </ul>
       </div>
 
-      <figure className="animate-fade-up-delayed">
+      <div className="animate-fade-up-delayed">
         <ArchFrame>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -48,10 +48,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             className="aspect-[4/5] w-full object-cover sm:aspect-[5/6]"
           />
         </ArchFrame>
-        <figcaption className="mt-2 text-center text-sm text-timber-faded">
-          {dict.hero.standInNote}
-        </figcaption>
-      </figure>
+      </div>
     </section>
   )
 }

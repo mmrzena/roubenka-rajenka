@@ -2,13 +2,12 @@ export const SITE_URL = 'https://roubenkarajenka.cz'
 export const SITE_NAME = 'Roubenka Rajenka'
 
 export const CONTACT_EMAIL = 'info@roubenkarajenka.cz'
-export const CONTACT_PHONE = '+420 777 123 456'
-export const CONTACT_PHONE_HREF = 'tel:+420777123456'
+export const CONTACT_PHONE = '+420 776 323 586'
+export const CONTACT_PHONE_HREF = 'tel:+420776323586'
 export const ADDRESS = 'Kněžnice, okres Jičín, Český ráj'
 
 export const IMAGES = {
-  hero: '/images/hero.svg',
-  interior: '/images/interior.svg',
+  hero: '/images/web/hero.jpg',
 }
 
 export const MAP_EMBED_URL =

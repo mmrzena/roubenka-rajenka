@@ -25,7 +25,6 @@ export interface Dictionary {
     ctaPrimary: string
     ctaSecondary: string
     imageAlt: string
-    standInNote: string
     facts: string[]
   }
   cottage: {
@@ -45,25 +44,34 @@ export interface Dictionary {
   gallery: {
     eyebrow: string
     title: string
-    note: string
-    interiorAlt: string
-    interiorLabel: string
-    placeholders: string[]
-    comingSoon: string
+    photos: { src: string; label: string; alt: string }[]
   }
   surroundings: {
     eyebrow: string
     title: string
     lead: string
     distanceNote: string
-    places: { name: string; distance: string; description: string }[]
+    groups: {
+      title: string
+      places: { name: string; distance: string; description: string }[]
+    }[]
   }
   pricing: {
     eyebrow: string
     title: string
-    note: string
-    rows: { label: string; value: string; detail?: string }[]
+    seasonsHead: { season: string; week: string; weekend: string }
+    seasons: { label: string; dates: string; week: string; weekend: string }[]
+    holidaysTitle: string
+    holidays: { label: string; value: string; detail: string }[]
+    holidaysNote: string
+    includesTitle: string
     includes: string
+    feesTitle: string
+    fees: string[]
+    checkTitle: string
+    check: string
+    cancellationTitle: string
+    cancellation: string[]
   }
   contact: {
     eyebrow: string

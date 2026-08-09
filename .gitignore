@@ -10,5 +10,9 @@ yarn-error.log*
 .env*.local
 .env
 .vercel
+
+# Raw camera originals from the owner (~5 MB each) — only the optimized
+# copies in public/images/web/ are committed and deployed
+/public/images/image*.jpeg
 *.tsbuildinfo
 next-env.d.ts

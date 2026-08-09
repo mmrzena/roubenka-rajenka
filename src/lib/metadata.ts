@@ -22,6 +22,7 @@ export function buildMetadata(dict: Dictionary): Metadata {
       siteName: SITE_NAME,
       locale: dict.locale === 'cs' ? 'cs_CZ' : 'en_GB',
       type: 'website',
+      images: ['/images/web/hero.jpg'],
     },
   }
 }

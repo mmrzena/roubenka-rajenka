@@ -7,8 +7,9 @@ export const CONTACT_PHONE_HREF = 'tel:+420776323586'
 export const ADDRESS = 'Kněžnice, okres Jičín, Český ráj'
 
 export const IMAGES = {
-  hero: '/images/hero.svg',
-  cottage: '/images/web/hero.jpg',
+  hero: '/images/web/hero.jpg',
+  heroIllustration: '/images/hero.svg',
+  cottage: '/images/web/exterier.jpg',
 }
 
 export const MAP_EMBED_URL =

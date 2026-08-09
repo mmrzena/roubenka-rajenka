@@ -4,8 +4,6 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Dictionary } from '@/i18n/types'
 import ArchFrame from './ArchFrame'
 
-const AUTO_ADVANCE_MS = 6000
-
 function ArrowIcon({ direction }: { direction: 'left' | 'right' }) {
   return (
     <svg
@@ -32,16 +30,13 @@ function thumbSrc(src: string) {
 export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gallery'] }) {
   const { photos } = gallery
   const [index, setIndex] = useState(0)
-  const [hovered, setHovered] = useState(false)
-  const [interacted, setInteracted] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
   const touchStartX = useRef<number | null>(null)
   const stripRef = useRef<HTMLDivElement | null>(null)
   const thumbRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   const goTo = useCallback(
-    (next: number, manual = true) => {
-      if (manual) setInteracted(true)
+    (next: number) => {
       setIndex(((next % photos.length) + photos.length) % photos.length)
     },
     [photos.length],
@@ -61,13 +56,6 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
       window.removeEventListener('keydown', onKeyDown)
     }
   }, [fullscreen, index, goTo])
-
-  useEffect(() => {
-    if (hovered || interacted || fullscreen) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    const id = setInterval(() => setIndex((i) => (i + 1) % photos.length), AUTO_ADVANCE_MS)
-    return () => clearInterval(id)
-  }, [hovered, interacted, fullscreen, photos.length])
 
   useEffect(() => {
     const neighbours = [index + 1, index - 1 + photos.length].map((i) => i % photos.length)
@@ -102,8 +90,6 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
       role="region"
       aria-roledescription="carousel"
       aria-label={gallery.title}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       onKeyDown={(event) => {
         if (event.key === 'ArrowLeft') goTo(index - 1)
         if (event.key === 'ArrowRight') goTo(index + 1)
@@ -113,10 +99,7 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
         <ArchFrame>
           <button
             type="button"
-            onClick={() => {
-              setInteracted(true)
-              setFullscreen(true)
-            }}
+            onClick={() => setFullscreen(true)}
             aria-label={gallery.openLabel}
             className="block w-full cursor-zoom-in"
           >

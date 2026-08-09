@@ -94,8 +94,23 @@ export const en: Dictionary = {
       },
       {
         src: '/images/web/loznice-1.jpg',
-        label: 'Bedroom',
-        alt: 'An attic bedroom with four beds',
+        label: 'First bedroom',
+        alt: 'The first attic bedroom with four beds',
+      },
+      {
+        src: '/images/web/loznice-podkrovi.jpg',
+        label: 'First bedroom from the doorway',
+        alt: 'The first bedroom with a double bed and a single bed',
+      },
+      {
+        src: '/images/web/loznice-postel.jpg',
+        label: 'First bedroom – double bed',
+        alt: 'The double bed with new mattresses in the first bedroom',
+      },
+      {
+        src: '/images/web/loznice-okna.jpg',
+        label: 'First bedroom – beds by the windows',
+        alt: 'Beds by the windows of the first bedroom, looking out into greenery',
       },
       {
         src: '/images/web/loznice-2.jpg',
@@ -103,29 +118,14 @@ export const en: Dictionary = {
         alt: 'The second attic bedroom with four beds',
       },
       {
-        src: '/images/web/loznice-podkrovi.jpg',
-        label: 'Under the roof',
-        alt: 'An attic bedroom with a double bed and a single bed',
-      },
-      {
-        src: '/images/web/loznice-postel.jpg',
-        label: 'Double bed',
-        alt: 'A double bed with new mattresses under the sloped ceiling',
-      },
-      {
-        src: '/images/web/loznice-okna.jpg',
-        label: 'Beds by the windows',
-        alt: 'Beds by the windows looking out into greenery',
-      },
-      {
         src: '/images/web/loznice-skrine.jpg',
-        label: 'Built-in wardrobes',
-        alt: 'Built-in wardrobes in an attic bedroom',
+        label: 'Second bedroom – built-in wardrobes',
+        alt: 'Built-in wardrobes in the second bedroom',
       },
       {
         src: '/images/web/postylka.jpg',
-        label: 'Baby cot',
-        alt: 'A bedroom with a baby cot',
+        label: 'Second bedroom – baby cot',
+        alt: 'The baby cot in the second bedroom',
       },
       {
         src: '/images/web/koupelna.jpg',

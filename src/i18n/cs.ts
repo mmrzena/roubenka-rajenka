@@ -94,8 +94,23 @@ export const cs: Dictionary = {
       },
       {
         src: '/images/web/loznice-1.jpg',
-        label: 'Ložnice',
-        alt: 'Podkrovní ložnice se čtyřmi lůžky',
+        label: 'První ložnice',
+        alt: 'První podkrovní ložnice se čtyřmi lůžky',
+      },
+      {
+        src: '/images/web/loznice-podkrovi.jpg',
+        label: 'První ložnice ode dveří',
+        alt: 'Pohled do první ložnice s manželskou postelí a samostatným lůžkem',
+      },
+      {
+        src: '/images/web/loznice-postel.jpg',
+        label: 'První ložnice – manželská postel',
+        alt: 'Manželská postel s novými matracemi v první ložnici',
+      },
+      {
+        src: '/images/web/loznice-okna.jpg',
+        label: 'První ložnice – lůžka u oken',
+        alt: 'Lůžka u oken první ložnice s výhledem do zeleně',
       },
       {
         src: '/images/web/loznice-2.jpg',
@@ -103,29 +118,14 @@ export const cs: Dictionary = {
         alt: 'Druhá podkrovní ložnice se čtyřmi lůžky',
       },
       {
-        src: '/images/web/loznice-podkrovi.jpg',
-        label: 'Pod krovem',
-        alt: 'Podkrovní ložnice s manželskou postelí a samostatným lůžkem',
-      },
-      {
-        src: '/images/web/loznice-postel.jpg',
-        label: 'Manželská postel',
-        alt: 'Manželská postel s novými matracemi pod šikminou',
-      },
-      {
-        src: '/images/web/loznice-okna.jpg',
-        label: 'Lůžka u oken',
-        alt: 'Lůžka u oken s výhledem do zeleně',
-      },
-      {
         src: '/images/web/loznice-skrine.jpg',
-        label: 'Vestavěné skříně',
-        alt: 'Vestavěné skříně v podkrovní ložnici',
+        label: 'Druhá ložnice – vestavěné skříně',
+        alt: 'Vestavěné skříně ve druhé ložnici',
       },
       {
         src: '/images/web/postylka.jpg',
-        label: 'Dětská postýlka',
-        alt: 'Ložnice s dětskou postýlkou',
+        label: 'Druhá ložnice – dětská postýlka',
+        alt: 'Dětská postýlka ve druhé ložnici',
       },
       {
         src: '/images/web/koupelna.jpg',

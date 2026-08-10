@@ -17,10 +17,10 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
     'https://obsazenost.e-chalupy.cz/kalendar.php?' +
     new URLSearchParams({
       id: ECHALUPY_CALENDAR_ID,
-      pocetMesicu: '6',
+      pocetMesicu: '4',
       legenda: 'ano',
       jednotky: 'ne',
-      velikost: '2',
+      velikost: '1',
       pozadi: 'FAF7F0',
       jazyk: dict.locale === 'cs' ? 'cz' : 'en',
     }).toString()
@@ -80,7 +80,7 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
                 title={dict.contact.calendarTitle}
                 loading="lazy"
                 id="echalupy-kalendar"
-                height={460}
+                height={340}
                 className="w-full rounded-lg border border-timber/15 bg-chalk"
               />
             </div>

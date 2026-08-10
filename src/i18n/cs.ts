@@ -419,6 +419,7 @@ export const cs: Dictionary = {
     emailLabel: 'E-mail',
     phoneLabel: 'Telefon',
     addressLabel: 'Adresa',
+    calendarTitle: 'Obsazenost',
     mapTitle: 'Mapa – Kněžnice, okres Jičín',
     mapLink: 'Otevřít mapu',
   },

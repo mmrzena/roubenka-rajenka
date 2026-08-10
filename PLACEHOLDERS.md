@@ -45,7 +45,8 @@ The form logs to console until SMTP is configured. Set in Vercel:
 
 ## Later
 
-- [ ] Availability calendar — deliberately skipped at launch. It slots into the
-      right-hand column of `ContactSection.tsx`, above the map.
+- [x] Availability calendar — embedded from e-chalupy.cz (object 23774) in the
+      right-hand column of `ContactSection.tsx`, above the map. Display only;
+      bookings still go through the inquiry form.
 - [ ] More photos — the gallery slideshow holds 15 of the 37 owner photos; the rest
       (bedroom details, kitchen details, landing) are available locally if wanted.

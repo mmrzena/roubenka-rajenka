@@ -12,6 +12,8 @@ export const IMAGES = {
   cottage: '/images/web/exterier.jpg',
 }
 
+export const ECHALUPY_CALENDAR_ID = '23774'
+
 export const MAP_EMBED_URL =
   'https://maps.google.com/maps?q=Kn%C4%9B%C5%BEnice%2040%2C%20okres%20Ji%C4%8D%C3%ADn&z=15&output=embed'
 export const MAP_LINK = 'https://maps.google.com/?q=Kn%C4%9B%C5%BEnice+40,+okres+Ji%C4%8D%C3%ADn'

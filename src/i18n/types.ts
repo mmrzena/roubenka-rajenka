@@ -85,6 +85,7 @@ export interface Dictionary {
     emailLabel: string
     phoneLabel: string
     addressLabel: string
+    calendarTitle: string
     mapTitle: string
     mapLink: string
   }

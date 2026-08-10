@@ -427,6 +427,7 @@ export const en: Dictionary = {
     emailLabel: 'Email',
     phoneLabel: 'Phone',
     addressLabel: 'Address',
+    calendarTitle: 'Availability',
     mapTitle: 'Map – Kněžnice, Jičín district',
     mapLink: 'Open the map',
   },

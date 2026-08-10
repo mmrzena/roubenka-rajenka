@@ -43,7 +43,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         </ul>
       </div>
 
-      <figure className="animate-fade-up-delayed relative">
+      <div className="animate-fade-up-delayed">
         <ArchFrame>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -52,52 +52,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             className="aspect-[4/5] w-full object-cover sm:aspect-[5/6]"
           />
         </ArchFrame>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={IMAGES.illustration}
-          alt=""
-          aria-hidden="true"
-          className="absolute -bottom-8 -left-3 w-28 -rotate-6 rounded-md border-4 border-chalk bg-chalk shadow-[0_10px_30px_-10px_rgba(43,32,24,0.45)] transition-transform duration-300 ease-out hover:-rotate-2 hover:scale-105 sm:-left-6 sm:w-36"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-10 -left-4 h-48 w-44"
-        >
-          <span className="firefly" style={{ left: '30%', top: '62%' }} />
-          <span
-            className="firefly"
-            style={{
-              left: '55%',
-              top: '70%',
-              animationDelay: '1.4s',
-              ['--drift-x' as string]: '-16px',
-            }}
-          />
-          <span
-            className="firefly"
-            style={{ left: '14%', top: '52%', animationDelay: '2.6s', animationDuration: '6.5s' }}
-          />
-          <span
-            className="firefly"
-            style={{
-              left: '70%',
-              top: '48%',
-              animationDelay: '3.8s',
-              ['--drift-x' as string]: '-24px',
-              animationDuration: '7s',
-            }}
-          />
-          <span
-            className="firefly"
-            style={{
-              left: '44%',
-              top: '40%',
-              animationDelay: '5s',
-              ['--drift-x' as string]: '20px',
-            }}
-          />
-        </div>
-      </figure>
+      </div>
     </section>
   )
 }

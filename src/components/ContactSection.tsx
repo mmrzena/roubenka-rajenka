@@ -28,11 +28,12 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
   return (
     <section id="kontakt" className="bg-chalk-dark/50">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-        <SectionHeading eyebrow={dict.contact.eyebrow} title={dict.contact.title} />
-        <p className="mb-12 max-w-2xl text-lg text-timber-soft">{dict.contact.lead}</p>
-
         <div className="grid gap-12 lg:grid-cols-[3fr_2fr]">
-          <InquiryForm dict={dict} />
+          <div>
+            <SectionHeading eyebrow={dict.contact.eyebrow} title={dict.contact.title} />
+            <p className="mb-12 max-w-2xl text-lg text-timber-soft">{dict.contact.lead}</p>
+            <InquiryForm dict={dict} />
+          </div>
 
           <div className="space-y-8">
             <dl className="space-y-5">

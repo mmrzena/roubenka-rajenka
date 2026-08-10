@@ -20,7 +20,8 @@ site-wide constants live in `src/lib/site.ts`.
 
 ## Still to confirm with the owner
 
-- [ ] **Email** — `info@roubenkarajenka.cz` is invented (`src/lib/site.ts` → `CONTACT_EMAIL`)
+- [x] **Email** — `info@roubenkarajenka.cz` is real (Seznam Email Profi, set up 2026-08-10);
+      `CONTACT_EMAIL` in `src/lib/site.ts` already matches.
 - [x] **Address** — Kněžnice 40 (confirmed 2026-08-09); shown in contact, map links and
       structured data.
 - [ ] **"Mimo sezónu" months** — the price list defines summer (1.5.–30.9.) and winter

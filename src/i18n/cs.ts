@@ -78,14 +78,14 @@ export const cs: Dictionary = {
     closeLabel: 'Zavřít',
     photos: [
       {
-        src: '/images/web/svetnice.jpg',
-        label: 'Světnice',
-        alt: 'Světnice s dubovým stolem, lavicí a okny se zelenými rámy',
-      },
-      {
         src: '/images/web/svetnice-celek.jpg',
         label: 'Světnice – celkový pohled',
         alt: 'Celkový pohled na světnici s jídelním stolem uprostřed',
+      },
+      {
+        src: '/images/web/svetnice.jpg',
+        label: 'Světnice',
+        alt: 'Světnice s dubovým stolem, lavicí a okny se zelenými rámy',
       },
       {
         src: '/images/web/svetnice-tramy.jpg',

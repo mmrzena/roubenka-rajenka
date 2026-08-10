@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Dictionary } from '@/i18n/types'
-import ArchFrame from './ArchFrame'
+import PhotoFrame from './PhotoFrame'
 
 function ArrowIcon({ direction }: { direction: 'left' | 'right' }) {
   return (
@@ -97,7 +97,7 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
       }}
     >
       <div className="relative" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
-        <ArchFrame>
+        <PhotoFrame>
           <button
             type="button"
             onClick={() => setFullscreen(true)}
@@ -112,7 +112,7 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
               className="animate-slide-fade aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.04] sm:aspect-[3/2]"
             />
           </button>
-        </ArchFrame>
+        </PhotoFrame>
 
         <button
           type="button"

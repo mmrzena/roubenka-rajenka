@@ -1,57 +1,55 @@
 import { Dictionary } from '@/i18n/types'
-import { IMAGES } from '@/lib/site'
-import ArchFrame from './ArchFrame'
 
 export default function Hero({ dict }: { dict: Dictionary }) {
   return (
-    <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-20">
-      <div className="animate-fade-up">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-sage-dark">
-          {dict.hero.eyebrow}
-        </p>
-        <h1 className="font-display text-5xl font-semibold text-timber sm:text-6xl">
-          {dict.hero.title}
-        </h1>
-        <p className="mt-6 max-w-xl text-lg text-timber-soft">{dict.hero.lead}</p>
+    <section className="grid md:h-[calc(100svh-66px)] md:min-h-[560px] md:grid-cols-2">
+      <div className="flex items-center px-4 py-14 sm:px-6 md:py-10 md:pl-[max(1.5rem,calc((100vw-72rem)/2))] md:pr-12">
+        <div className="animate-fade-up">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-sage-dark">
+            {dict.hero.eyebrow}
+          </p>
+          <h1 className="font-display text-5xl font-semibold text-timber sm:text-6xl">
+            {dict.hero.title}
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-timber-soft">{dict.hero.lead}</p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="#kontakt"
-            className="rounded-full bg-terracotta px-6 py-3 font-medium text-chalk transition-colors hover:bg-terracotta-dark"
-          >
-            {dict.hero.ctaPrimary}
-          </a>
-          <a
-            href="#chalupa"
-            className="rounded-full border border-timber/25 px-6 py-3 font-medium text-timber transition-colors hover:border-sage hover:text-sage-dark"
-          >
-            {dict.hero.ctaSecondary}
-          </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#kontakt"
+              className="rounded-full bg-terracotta px-6 py-3 font-medium text-chalk transition-colors hover:bg-terracotta-dark"
+            >
+              {dict.hero.ctaPrimary}
+            </a>
+            <a
+              href="#chalupa"
+              className="rounded-full border border-timber/25 px-6 py-3 font-medium text-timber transition-colors hover:border-sage hover:text-sage-dark"
+            >
+              {dict.hero.ctaSecondary}
+            </a>
+          </div>
+
+          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
+            {dict.hero.facts.map((fact, index) => (
+              <li key={fact} className="flex items-center gap-2 text-sm text-timber-faded">
+                <span
+                  aria-hidden="true"
+                  className="hero-fact-dash h-1.5 w-4 rounded-sm bg-sage"
+                  style={{ animationDelay: `${0.7 + index * 0.15}s` }}
+                />
+                {fact}
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
-          {dict.hero.facts.map((fact, index) => (
-            <li key={fact} className="flex items-center gap-2 text-sm text-timber-faded">
-              <span
-                aria-hidden="true"
-                className="hero-fact-dash h-1.5 w-4 rounded-sm bg-sage"
-                style={{ animationDelay: `${0.7 + index * 0.15}s` }}
-              />
-              {fact}
-            </li>
-          ))}
-        </ul>
       </div>
 
-      <div className="animate-fade-up-delayed">
-        <ArchFrame>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={IMAGES.hero}
-            alt={dict.hero.imageAlt}
-            className="aspect-[4/5] w-full object-cover sm:aspect-[5/6]"
-          />
-        </ArchFrame>
+      <div className="animate-fade-up-delayed relative">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/web/hero-wide.jpg"
+          alt={dict.hero.imageAlt}
+          className="aspect-[4/3] w-full object-cover object-left md:absolute md:inset-0 md:h-full md:aspect-auto"
+        />
       </div>
     </section>
   )

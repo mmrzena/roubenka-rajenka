@@ -31,9 +31,6 @@ const config: Config = {
         display: ['var(--font-fraunces)', 'Georgia', 'serif'],
         body: ['var(--font-karla)', 'system-ui', 'sans-serif'],
       },
-      borderRadius: {
-        arch: '45% 45% 6px 6px / 18% 18% 6px 6px',
-      },
     },
   },
   plugins: [],

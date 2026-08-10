@@ -78,14 +78,14 @@ export const en: Dictionary = {
     closeLabel: 'Close',
     photos: [
       {
-        src: '/images/web/svetnice.jpg',
-        label: 'Living room',
-        alt: 'The living room with an oak table, a bench and green-framed windows',
-      },
-      {
         src: '/images/web/svetnice-celek.jpg',
         label: 'Living room – full view',
         alt: 'A full view of the living room with the dining table in the middle',
+      },
+      {
+        src: '/images/web/svetnice.jpg',
+        label: 'Living room',
+        alt: 'The living room with an oak table, a bench and green-framed windows',
       },
       {
         src: '/images/web/svetnice-tramy.jpg',

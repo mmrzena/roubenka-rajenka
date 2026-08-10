@@ -43,6 +43,7 @@ export const en: Dictionary = {
       'Dolce Gusto coffee machine (16 capsules included)',
       'Fireplace in the living room',
       'Smart TV',
+      'Wi-Fi',
       'Washing machine',
       'Garden pool',
       'Trampoline and playground',

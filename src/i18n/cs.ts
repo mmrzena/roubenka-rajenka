@@ -43,6 +43,7 @@ export const cs: Dictionary = {
       'Kávovar Dolce Gusto (16 kapslí v ceně)',
       'Krb ve světnici',
       'Smart TV',
+      'Wi-Fi připojení',
       'Pračka',
       'Bazén na zahradě',
       'Trampolína a dětské hřiště',

@@ -33,6 +33,17 @@ body {
   outline-offset: 2px;
 }
 
+/* iOS Safari sizes date inputs to their content, ignoring w-full, and centers the value */
+input[type='date'] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 2.875rem;
+}
+
+input[type='date']::-webkit-date-and-time-value {
+  text-align: left;
+}
+
 .stripe-divider {
   height: 26px;
   background: repeating-linear-gradient(

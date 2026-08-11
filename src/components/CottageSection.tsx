@@ -6,7 +6,7 @@ import SectionHeading from './SectionHeading'
 export default function CottageSection({ dict }: { dict: Dictionary }) {
   return (
     <section id="chalupa" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-      <SectionHeading eyebrow={dict.cottage.eyebrow} title={dict.cottage.title} />
+      <SectionHeading title={dict.cottage.title} />
 
       <div className="grid gap-12 md:grid-cols-[3fr_2fr]">
         <div>
@@ -36,10 +36,7 @@ export default function CottageSection({ dict }: { dict: Dictionary }) {
             openLabel={dict.gallery.openLabel}
             closeLabel={dict.gallery.closeLabel}
           />
-          <div className="joinery-frame mt-6 bg-sage-mist p-6">
-            <h3 className="mb-5 font-display text-xl font-medium text-timber">
-              {dict.cottage.factsTitle}
-            </h3>
+          <div className="mt-6 bg-sage-mist p-6">
             <dl className="space-y-4">
               {dict.cottage.facts.map((fact) => (
                 <div key={fact.label}>

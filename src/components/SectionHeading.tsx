@@ -1,21 +1,16 @@
 export default function SectionHeading({
-  eyebrow,
   title,
   onDark = false,
 }: {
-  eyebrow: string
   title: string
   onDark?: boolean
 }) {
   return (
     <div className="mb-10">
-      <p
-        className={`mb-3 text-sm font-bold uppercase tracking-[0.2em] ${
-          onDark ? 'text-amber-glow' : 'text-sage-dark'
-        }`}
-      >
-        {eyebrow}
-      </p>
+      <div
+        aria-hidden="true"
+        className={`mb-4 w-12 ${onDark ? 'stripe-mark-on-dark' : 'stripe-mark'}`}
+      />
       <h2
         className={`font-display text-3xl font-medium sm:text-4xl ${
           onDark ? 'text-chalk' : 'text-timber'

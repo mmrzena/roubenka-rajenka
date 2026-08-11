@@ -8,7 +8,7 @@ export default function SurroundingsSection({ dict }: { dict: Dictionary }) {
   return (
     <section id="okoli" className="bg-sage-mist/60">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-        <SectionHeading eyebrow={dict.surroundings.eyebrow} title={dict.surroundings.title} />
+        <SectionHeading title={dict.surroundings.title} />
         <p className="mb-12 max-w-2xl text-lg text-timber-soft">{dict.surroundings.lead}</p>
 
         <div className="space-y-4">

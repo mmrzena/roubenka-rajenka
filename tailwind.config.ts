@@ -28,7 +28,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['var(--font-fraunces)', 'Georgia', 'serif'],
+        display: ['var(--font-vollkorn)', 'Georgia', 'serif'],
         body: ['var(--font-karla)', 'system-ui', 'sans-serif'],
       },
     },

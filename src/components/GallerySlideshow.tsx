@@ -150,7 +150,7 @@ export default function GallerySlideshow({ gallery }: { gallery: Dictionary['gal
             onClick={() => goTo(i)}
             aria-label={thumb.label}
             aria-current={i === index}
-            className={`shrink-0 overflow-hidden rounded-md transition-all ${
+            className={`shrink-0 overflow-hidden transition-all ${
               i === index
                 ? 'ring-[3px] ring-sage'
                 : 'opacity-70 ring-1 ring-timber/15 hover:opacity-100'

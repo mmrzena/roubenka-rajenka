@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading'
 export default function GallerySection({ dict }: { dict: Dictionary }) {
   return (
     <section id="galerie" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-      <SectionHeading eyebrow={dict.gallery.eyebrow} title={dict.gallery.title} />
+      <SectionHeading title={dict.gallery.title} />
       <div className="mx-auto max-w-4xl">
         <GallerySlideshow gallery={dict.gallery} />
       </div>

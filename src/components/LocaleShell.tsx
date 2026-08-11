@@ -1,12 +1,12 @@
-import { Fraunces, Karla } from 'next/font/google'
+import { Karla, Vollkorn } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import QueryProvider from '@/providers/QueryProvider'
 import { Locale } from '@/i18n/types'
 import '@/app/globals.css'
 
-const fraunces = Fraunces({
+const vollkorn = Vollkorn({
   subsets: ['latin', 'latin-ext'],
-  variable: '--font-fraunces',
+  variable: '--font-vollkorn',
   weight: ['400', '500', '600'],
 })
 
@@ -24,7 +24,7 @@ export default function LocaleShell({
   children: React.ReactNode
 }) {
   return (
-    <html lang={lang} className={`${fraunces.variable} ${karla.variable}`}>
+    <html lang={lang} className={`${vollkorn.variable} ${karla.variable}`}>
       <body>
         <QueryProvider>{children}</QueryProvider>
         <Analytics />

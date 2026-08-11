@@ -29,7 +29,6 @@ export const cs: Dictionary = {
     facts: ['až 8 hostů', '2 ložnice + světnice', 'zahrada s bazénem', 'parkování na pozemku'],
   },
   cottage: {
-    eyebrow: 'Chalupa',
     title: 'Roubenka, jak má být',
     imageAlt: 'Průčelí roubenky s červenou střechou a bílými spárami',
     paragraphs: [
@@ -53,7 +52,6 @@ export const cs: Dictionary = {
       'Dětská postýlka',
       'Parkování na pozemku',
     ],
-    factsTitle: 'V kostce',
     facts: [
       { label: 'Kapacita', value: 'až 8 hostů (2× 4 lůžka)' },
       { label: 'Ložnice', value: '2 v podkroví + dětská postýlka' },
@@ -63,7 +61,6 @@ export const cs: Dictionary = {
     ],
   },
   story: {
-    eyebrow: 'Historie',
     title: 'Dům, který pamatuje',
     paragraphs: [
       'Chalupu postavili místní tesaři z borového dřeva před více než sto lety – přesně tak, jak se v podhůří Českého ráje stavělo odjakživa. Nechybí roubené stěny, bílé spáry, masivní trámy ani valbová střecha, která dům chrání proti severnímu větru.',
@@ -71,7 +68,6 @@ export const cs: Dictionary = {
     ],
   },
   gallery: {
-    eyebrow: 'Galerie',
     title: 'Nahlédněte dovnitř',
     prevLabel: 'Předchozí fotografie',
     nextLabel: 'Další fotografie',
@@ -196,7 +192,6 @@ export const cs: Dictionary = {
     ],
   },
   surroundings: {
-    eyebrow: 'Okolí',
     title: 'Český ráj za humny',
     lead: 'Kněžnice nabízí skvělou vybavenost i dostupnost: v docházkové vzdálenosti je vyhlášená pekárna Náš Chléb i vlaková a autobusová zastávka, takže pohodlně dorazíte i bez auta. Okolí je protkané pěšími trasami a cyklostezkami od Prachovských skal až po pohádkový Jičín.',
     distanceNote: 'Vzdálenosti jsou orientační, měřeno od chalupy.',
@@ -369,7 +364,6 @@ export const cs: Dictionary = {
     ],
   },
   pricing: {
-    eyebrow: 'Ceník',
     title: 'Kolik stojí pobyt',
     seasonsHead: { season: 'Sezóna', week: 'Týden', weekend: 'Víkend' },
     seasons: [
@@ -414,14 +408,12 @@ export const cs: Dictionary = {
     ],
   },
   contact: {
-    eyebrow: 'Kontakt a rezervace',
     title: 'Napište si o termín',
     lead: 'Pošlete nám termín a počet hostů a my se vám co nejdříve ozveme s potvrzením volných dní a cenou. Rezervace potvrzujeme osobně – žádný automat.',
     emailLabel: 'E-mail',
     phoneLabel: 'Telefon',
     addressLabel: 'Adresa',
     calendarTitle: 'Obsazenost',
-    mapTitle: 'Mapa – Kněžnice, okres Jičín',
     mapLink: 'Otevřít mapu',
   },
   form: {

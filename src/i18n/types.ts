@@ -28,22 +28,18 @@ export interface Dictionary {
     facts: string[]
   }
   cottage: {
-    eyebrow: string
     title: string
     imageAlt: string
     paragraphs: string[]
     amenitiesTitle: string
     amenities: string[]
-    factsTitle: string
     facts: { label: string; value: string }[]
   }
   story: {
-    eyebrow: string
     title: string
     paragraphs: string[]
   }
   gallery: {
-    eyebrow: string
     title: string
     prevLabel: string
     nextLabel: string
@@ -52,7 +48,6 @@ export interface Dictionary {
     photos: { src: string; label: string; alt: string }[]
   }
   surroundings: {
-    eyebrow: string
     title: string
     lead: string
     distanceNote: string
@@ -62,7 +57,6 @@ export interface Dictionary {
     }[]
   }
   pricing: {
-    eyebrow: string
     title: string
     seasonsHead: { season: string; week: string; weekend: string }
     seasons: { label: string; dates: string; week: string; weekend: string }[]
@@ -79,14 +73,12 @@ export interface Dictionary {
     cancellation: string[]
   }
   contact: {
-    eyebrow: string
     title: string
     lead: string
     emailLabel: string
     phoneLabel: string
     addressLabel: string
     calendarTitle: string
-    mapTitle: string
     mapLink: string
   }
   form: {

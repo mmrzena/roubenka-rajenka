@@ -44,31 +44,6 @@ input[type='date']::-webkit-date-and-time-value {
   text-align: left;
 }
 
-/* Joinery frame: the side rules overshoot each corner like the crossed
-   log ends of a roubenka corner joint */
-.joinery-frame {
-  position: relative;
-}
-
-.joinery-frame::before,
-.joinery-frame::after {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-}
-
-.joinery-frame::before {
-  inset: 0 -7px;
-  border-top: 1.5px solid rgba(43, 32, 24, 0.35);
-  border-bottom: 1.5px solid rgba(43, 32, 24, 0.35);
-}
-
-.joinery-frame::after {
-  inset: -7px 0;
-  border-left: 1.5px solid rgba(43, 32, 24, 0.35);
-  border-right: 1.5px solid rgba(43, 32, 24, 0.35);
-}
-
 /* Solid action buttons get one chamfered corner, like an axe-cut beam end */
 .btn-cut {
   clip-path: polygon(
@@ -82,7 +57,7 @@ input[type='date']::-webkit-date-and-time-value {
 
 /* clip-path swallows the global outline, so the focus ring moves inside */
 .btn-cut:focus-visible,
-summary.signpost-slat:focus-visible {
+.signpost-slat:focus-visible {
   outline: none;
   box-shadow: inset 0 0 0 2.5px #e5a33f;
 }
@@ -111,6 +86,17 @@ summary.signpost-slat:focus-visible {
     #fff 67% 100%
   );
   box-shadow: inset 0 0 0 1px rgba(43, 32, 24, 0.25);
+}
+
+/* Word-scale segment of the log-wall divider, replaces uppercase eyebrows */
+.stripe-mark {
+  height: 14px;
+  background: repeating-linear-gradient(to bottom, #2b2018 0 5px, transparent 5px 9px);
+}
+
+.stripe-mark-on-dark {
+  height: 14px;
+  background: repeating-linear-gradient(to bottom, #faf7f0 0 5px, transparent 5px 9px);
 }
 
 .stripe-divider {

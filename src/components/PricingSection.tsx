@@ -6,7 +6,7 @@ export default function PricingSection({ dict }: { dict: Dictionary }) {
 
   return (
     <section id="cenik" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-      <SectionHeading eyebrow={pricing.eyebrow} title={pricing.title} />
+      <SectionHeading title={pricing.title} />
 
       <div className="grid gap-12 lg:grid-cols-[3fr_2fr]">
         <div>
@@ -61,7 +61,7 @@ export default function PricingSection({ dict }: { dict: Dictionary }) {
           <p className="mt-4 text-sm text-timber-faded">{pricing.holidaysNote}</p>
         </div>
 
-        <aside className="joinery-frame h-fit space-y-8 bg-sage-mist p-6">
+        <aside className="h-fit space-y-8 bg-sage-mist p-6">
           <div>
             <h3 className="mb-2 font-display text-xl font-medium text-timber">
               {pricing.includesTitle}

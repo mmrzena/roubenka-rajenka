@@ -6,7 +6,6 @@ import {
   CONTACT_PHONE,
   CONTACT_PHONE_HREF,
   ECHALUPY_CALENDAR_ID,
-  MAP_EMBED_URL,
   MAP_LINK,
 } from '@/lib/site'
 import InquiryForm from './InquiryForm'
@@ -30,7 +29,7 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
         <div className="grid gap-12 lg:grid-cols-[3fr_2fr]">
           <div>
-            <SectionHeading eyebrow={dict.contact.eyebrow} title={dict.contact.title} />
+            <SectionHeading title={dict.contact.title} />
             <p className="mb-12 max-w-2xl text-lg text-timber-soft">{dict.contact.lead}</p>
             <InquiryForm dict={dict} />
           </div>
@@ -82,27 +81,21 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
                 loading="lazy"
                 id="echalupy-kalendar"
                 height={340}
-                className="w-full rounded-lg border border-timber/15 bg-chalk"
+                className="block w-full bg-chalk"
               />
             </div>
 
-            <div>
-              <iframe
-                src={MAP_EMBED_URL}
-                title={dict.contact.mapTitle}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-64 w-full rounded-lg border border-timber/15"
-              />
-              <a
-                href={MAP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block text-sm text-sage-dark underline-offset-4 hover:underline"
-              >
-                {dict.contact.mapLink}
-              </a>
-            </div>
+            <a
+              href={MAP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="signpost-slat flex items-center justify-between gap-3 bg-timber py-3 pl-4 pr-12 font-medium text-chalk transition-colors hover:bg-timber-soft"
+            >
+              {dict.contact.mapLink}
+              <span aria-hidden="true" className="font-semibold text-amber-glow">
+                ↗
+              </span>
+            </a>
           </div>
         </div>
       </div>

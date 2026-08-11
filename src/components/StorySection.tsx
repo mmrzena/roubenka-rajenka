@@ -10,7 +10,7 @@ export default function StorySection({ dict }: { dict: Dictionary }) {
       <section id="pribeh" className="bg-timber">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[3fr_2fr] md:items-center md:py-24">
           <div>
-            <SectionHeading eyebrow={dict.story.eyebrow} title={dict.story.title} onDark />
+            <SectionHeading title={dict.story.title} onDark />
             <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-chalk-dark/90">
               {dict.story.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>

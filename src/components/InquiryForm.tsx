@@ -5,7 +5,7 @@ import { Dictionary } from '@/i18n/types'
 import { useInquiryForm } from '@/hooks/useInquiry'
 
 const inputClasses =
-  'w-full rounded-md border border-timber/20 bg-chalk px-3.5 py-2.5 text-timber placeholder:text-timber-faded/70 focus:border-sage focus:outline-none focus:ring-2 focus:ring-sage/30'
+  'w-full border border-timber/20 bg-chalk px-3.5 py-2.5 text-timber placeholder:text-timber-faded/70 focus:border-sage focus:outline-none focus:ring-2 focus:ring-sage/30'
 
 export default function InquiryForm({ dict }: { dict: Dictionary }) {
   const [startedAt] = useState(() => Date.now().toString())
@@ -31,7 +31,7 @@ export default function InquiryForm({ dict }: { dict: Dictionary }) {
 
   if (mutation.isSuccess) {
     return (
-      <div className="joinery-frame bg-sage-mist p-8 text-center">
+      <div className="bg-sage-mist p-8 text-center">
         <p className="font-display text-2xl font-medium text-timber">{dict.form.success}</p>
         <p className="mt-3 text-timber-soft">{dict.form.successDetail}</p>
       </div>
@@ -104,7 +104,7 @@ export default function InquiryForm({ dict }: { dict: Dictionary }) {
       {mutation.isError && (
         <p
           role="alert"
-          className="rounded-md bg-terracotta/10 px-4 py-3 text-sm text-terracotta-dark"
+          className="bg-terracotta/10 px-4 py-3 text-sm text-terracotta-dark"
         >
           {mutation.error.message}
         </p>

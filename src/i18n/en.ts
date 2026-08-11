@@ -29,7 +29,6 @@ export const en: Dictionary = {
     facts: ['sleeps up to 8', '2 bedrooms + living room', 'garden with a pool', 'parking on site'],
   },
   cottage: {
-    eyebrow: 'The cottage',
     title: 'A log cottage the way it should be',
     imageAlt: 'The front of the timbered cottage with its red roof and white-limed joints',
     paragraphs: [
@@ -53,7 +52,6 @@ export const en: Dictionary = {
       'Baby cot',
       'Parking on site',
     ],
-    factsTitle: 'At a glance',
     facts: [
       { label: 'Capacity', value: 'up to 8 guests (2× 4 beds)' },
       { label: 'Bedrooms', value: '2 attic bedrooms + baby cot' },
@@ -63,7 +61,6 @@ export const en: Dictionary = {
     ],
   },
   story: {
-    eyebrow: 'History',
     title: 'A house that remembers',
     paragraphs: [
       'Local carpenters built the cottage from pine over a hundred years ago – exactly the way houses were always built in the foothills of Bohemian Paradise. It has everything a true log cottage should: log walls, white-limed joints, massive beams and a hipped roof that shields the house from the north wind.',
@@ -71,7 +68,6 @@ export const en: Dictionary = {
     ],
   },
   gallery: {
-    eyebrow: 'Gallery',
     title: 'Have a look inside',
     prevLabel: 'Previous photo',
     nextLabel: 'Next photo',
@@ -196,7 +192,6 @@ export const en: Dictionary = {
     ],
   },
   surroundings: {
-    eyebrow: 'Around',
     title: 'Bohemian Paradise on your doorstep',
     lead: 'Kněžnice is well equipped and easy to reach: the renowned Náš Chléb bakery and both the train and bus stops are within walking distance, so you can arrive comfortably without a car. The countryside is laced with hiking trails and cycling paths, from the Prachov Rocks to storybook Jičín.',
     distanceNote: 'Distances are approximate, measured from the cottage.',
@@ -369,7 +364,6 @@ export const en: Dictionary = {
     ],
   },
   pricing: {
-    eyebrow: 'Rates',
     title: 'What a stay costs',
     seasonsHead: { season: 'Season', week: 'Week', weekend: 'Weekend' },
     seasons: [
@@ -422,14 +416,12 @@ export const en: Dictionary = {
     ],
   },
   contact: {
-    eyebrow: 'Contact & booking',
     title: 'Ask about your dates',
     lead: 'Send us your dates and group size and we will get back to you with availability and a price. Every booking is confirmed personally – no bots.',
     emailLabel: 'Email',
     phoneLabel: 'Phone',
     addressLabel: 'Address',
     calendarTitle: 'Availability',
-    mapTitle: 'Map – Kněžnice, Jičín district',
     mapLink: 'Open the map',
   },
   form: {

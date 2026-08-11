@@ -5,7 +5,8 @@ export default function Hero({ dict }: { dict: Dictionary }) {
     <section className="grid md:h-[calc(100svh-66px)] md:min-h-[560px] md:grid-cols-2">
       <div className="flex items-center px-4 py-14 sm:px-6 md:py-10 md:pl-[max(1.5rem,calc((100vw-72rem)/2))] md:pr-12">
         <div className="animate-fade-up">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-sage-dark">
+          <p className="mb-5 flex items-center gap-2.5 font-medium text-timber-faded">
+            <span aria-hidden="true" className="blaze shrink-0" />
             {dict.hero.eyebrow}
           </p>
           <h1 className="font-display text-5xl font-semibold text-timber sm:text-6xl">

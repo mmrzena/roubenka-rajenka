@@ -5,6 +5,7 @@ export const CONTACT_EMAIL = 'info@roubenkarajenka.cz'
 export const CONTACT_PHONE = '+420 776 323 586'
 export const CONTACT_PHONE_HREF = 'tel:+420776323586'
 export const ADDRESS = 'Kněžnice 40, okres Jičín, Český ráj'
+export const COORDINATES = { latitude: 50.4998356, longitude: 15.322471 }
 
 export const IMAGES = {
   hero: '/images/web/hero.jpg',

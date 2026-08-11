@@ -16,8 +16,8 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
   return (
     <header className="sticky top-0 z-50 bg-chalk/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <a href="#top" className="group flex items-center gap-2.5">
-          <LogoMark className="h-6 w-6 shrink-0 -translate-y-[1.5px]" />
+        <a href="#top" className="flex items-center gap-2.5">
+          <LogoMark className="h-7 w-7 shrink-0 -translate-y-[1.5px]" />
           <span className="font-display text-lg font-semibold leading-none text-timber">
             {SITE_NAME}
           </span>

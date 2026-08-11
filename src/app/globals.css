@@ -165,39 +165,53 @@ input[type='date']::-webkit-date-and-time-value {
   animation: firefly-drift 5.5s ease-in-out infinite;
 }
 
-/* Smoke drifts up from behind the roof ridge on a long, quiet loop */
-@keyframes chimney-puff {
-  0% {
-    transform: translate(0, 0) scale(0.4);
+/* Page load only: the roubenka stacks itself — beams bottom-up alternating
+   sides, then the roof drops in, then the wordmark rises. The beams start
+   off-canvas and are hidden by the wall clip until they slide home. Once the
+   sequence finishes nothing on the mark moves again. */
+@keyframes beam-slide-in {
+  from {
+    transform: translateX(var(--beam-from));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.logo-beam {
+  animation: beam-slide-in 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.logo-beam-1 {
+  --beam-from: -26px;
+}
+
+.logo-beam-2 {
+  --beam-from: 26px;
+  animation-delay: 0.1s;
+}
+
+.logo-beam-3 {
+  --beam-from: -26px;
+  animation-delay: 0.2s;
+}
+
+@keyframes roof-drop {
+  from {
     opacity: 0;
+    transform: translateY(-9px);
   }
-  1% {
-    opacity: 0.7;
+  55% {
+    opacity: 1;
   }
-  4% {
-    transform: translate(-1.5px, -8px) scale(1.2);
-    opacity: 0.4;
-  }
-  6%,
-  100% {
-    transform: translate(-3px, -14px) scale(1.6);
-    opacity: 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.logo-puff {
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-  opacity: 0;
-  animation: chimney-puff 60s ease-out 8s infinite;
-}
-
-.logo-puff-2 {
-  animation-delay: 9.6s;
-}
-
-.logo-puff-3 {
-  animation-delay: 11.4s;
+.logo-roof {
+  animation: roof-drop 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) 0.42s both;
 }
 
 @keyframes lightbox-in {

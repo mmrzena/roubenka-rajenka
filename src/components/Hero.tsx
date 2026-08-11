@@ -5,10 +5,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
     <section className="grid md:h-[calc(100svh-66px)] md:min-h-[560px] md:grid-cols-2">
       <div className="flex items-center px-4 py-14 sm:px-6 md:py-10 md:pl-[max(1.5rem,calc((100vw-72rem)/2))] md:pr-12">
         <div className="animate-fade-up">
-          <p className="mb-5 flex items-center gap-2.5 font-medium text-timber-faded">
-            <span aria-hidden="true" className="blaze shrink-0" />
-            {dict.hero.eyebrow}
-          </p>
+          <p className="mb-5 font-medium text-timber-faded">{dict.hero.eyebrow}</p>
           <h1 className="font-display text-5xl font-semibold text-timber sm:text-6xl">
             {dict.hero.title}
           </h1>
@@ -30,13 +27,9 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           </div>
 
           <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
-            {dict.hero.facts.map((fact, index) => (
+            {dict.hero.facts.map((fact) => (
               <li key={fact} className="flex items-center gap-2 text-sm text-timber-faded">
-                <span
-                  aria-hidden="true"
-                  className="hero-fact-dash h-1.5 w-4 rounded-sm bg-sage"
-                  style={{ animationDelay: `${0.7 + index * 0.15}s` }}
-                />
+                <span aria-hidden="true" className="h-1.5 w-4 shrink-0 bg-sage" />
                 {fact}
               </li>
             ))}

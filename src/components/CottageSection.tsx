@@ -22,7 +22,7 @@ export default function CottageSection({ dict }: { dict: Dictionary }) {
           <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {dict.cottage.amenities.map((amenity) => (
               <li key={amenity} className="flex items-center gap-3 text-timber-soft">
-                <span aria-hidden="true" className="h-1.5 w-4 shrink-0 rounded-sm bg-sage" />
+                <span aria-hidden="true" className="h-1.5 w-4 shrink-0 bg-sage" />
                 {amenity}
               </li>
             ))}

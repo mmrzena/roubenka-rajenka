@@ -364,7 +364,7 @@ export const cs: Dictionary = {
     ],
   },
   pricing: {
-    title: 'Kolik stojí pobyt',
+    title: 'Ceník',
     seasonsHead: { season: 'Sezóna', week: 'Týden', weekend: 'Víkend' },
     seasons: [
       { label: 'Letní sezóna', dates: '1. 5. – 30. 9.', week: '25 000 Kč', weekend: '8 000 Kč' },

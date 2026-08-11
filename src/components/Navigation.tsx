@@ -6,8 +6,8 @@ import LogoMark from './LogoMark'
 export default function Navigation({ dict }: { dict: Dictionary }) {
   const links = [
     { href: '#chalupa', label: dict.nav.cottage },
-    { href: '#pribeh', label: dict.nav.story },
     { href: '#galerie', label: dict.nav.gallery },
+    { href: '#pribeh', label: dict.nav.story },
     { href: '#okoli', label: dict.nav.surroundings },
     { href: '#cenik', label: dict.nav.pricing },
     { href: '#kontakt', label: dict.nav.contact },
@@ -17,8 +17,10 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
     <header className="sticky top-0 z-50 bg-chalk/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <a href="#top" className="group flex items-center gap-2.5">
-          <LogoMark className="h-7 w-7" />
-          <span className="font-display text-lg font-semibold text-timber">{SITE_NAME}</span>
+          <LogoMark className="h-6 w-6 shrink-0 -translate-y-[1.5px]" />
+          <span className="font-display text-lg font-semibold leading-none text-timber">
+            {SITE_NAME}
+          </span>
         </a>
 
         <div className="hidden items-center gap-6 lg:flex">

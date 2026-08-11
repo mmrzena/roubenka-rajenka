@@ -364,7 +364,7 @@ export const en: Dictionary = {
     ],
   },
   pricing: {
-    title: 'What a stay costs',
+    title: 'Rates',
     seasonsHead: { season: 'Season', week: 'Week', weekend: 'Weekend' },
     seasons: [
       { label: 'Summer season', dates: '1 May – 30 Sep', week: 'CZK 25,000', weekend: 'CZK 8,000' },

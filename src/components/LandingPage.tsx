@@ -18,8 +18,8 @@ export default function LandingPage({ dict }: { dict: Dictionary }) {
       <main>
         <Hero dict={dict} />
         <CottageSection dict={dict} />
-        <StorySection dict={dict} />
         <GallerySection dict={dict} />
+        <StorySection dict={dict} />
         <SurroundingsSection dict={dict} />
         <PricingSection dict={dict} />
         <ContactSection dict={dict} />

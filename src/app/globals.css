@@ -74,17 +74,6 @@ input[type='date']::-webkit-date-and-time-value {
   );
 }
 
-/* Word-scale segment of the log-wall divider, replaces uppercase eyebrows */
-.stripe-mark {
-  height: 14px;
-  background: repeating-linear-gradient(to bottom, #2b2018 0 5px, transparent 5px 9px);
-}
-
-.stripe-mark-on-dark {
-  height: 14px;
-  background: repeating-linear-gradient(to bottom, #faf7f0 0 5px, transparent 5px 9px);
-}
-
 .stripe-divider {
   height: 26px;
   background: repeating-linear-gradient(
@@ -176,39 +165,39 @@ input[type='date']::-webkit-date-and-time-value {
   animation: firefly-drift 5.5s ease-in-out infinite;
 }
 
-.logo-hand {
-  transform-box: fill-box;
-  transform-origin: 50% 95%;
-  transform: translate(-9px, 18px);
-  animation: hand-hello 75s ease-in-out 9s infinite;
-}
-
-@keyframes hand-hello {
+/* Smoke drifts up from behind the roof ridge on a long, quiet loop */
+@keyframes chimney-puff {
   0% {
-    transform: translate(-9px, 18px) rotate(0deg);
+    transform: translate(0, 0) scale(0.4);
+    opacity: 0;
   }
   1% {
-    transform: translate(0, 0) rotate(22deg);
+    opacity: 0.7;
   }
-  1.8% {
-    transform: translate(0, 0) rotate(4deg);
+  4% {
+    transform: translate(-1.5px, -8px) scale(1.2);
+    opacity: 0.4;
   }
-  2.6% {
-    transform: translate(0, 0) rotate(36deg);
-  }
-  3.4% {
-    transform: translate(0, 0) rotate(4deg);
-  }
-  4.2% {
-    transform: translate(0, 0) rotate(36deg);
-  }
-  5% {
-    transform: translate(0, 0) rotate(22deg);
-  }
-  6.6%,
+  6%,
   100% {
-    transform: translate(-9px, 18px) rotate(0deg);
+    transform: translate(-3px, -14px) scale(1.6);
+    opacity: 0;
   }
+}
+
+.logo-puff {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  opacity: 0;
+  animation: chimney-puff 60s ease-out 8s infinite;
+}
+
+.logo-puff-2 {
+  animation-delay: 9.6s;
+}
+
+.logo-puff-3 {
+  animation-delay: 11.4s;
 }
 
 @keyframes lightbox-in {

@@ -443,6 +443,10 @@ export const cs: Dictionary = {
       'Ozveme se vám co nejdříve s potvrzením termínu. Kopii jsme poslali na váš e-mail.',
     error: 'Poptávku se nepodařilo odeslat. Zkuste to prosím znovu, nebo nám napište e-mail.',
   },
+  theme: {
+    toNight: 'Přepnout na noční zobrazení',
+    toDay: 'Přepnout na denní zobrazení',
+  },
   footer: {
     tagline: 'Roubenka na dohled od Trosek',
     rights: 'Roubenka Rájenka, Kněžnice',

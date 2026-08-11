@@ -89,7 +89,7 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
               href={MAP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="signpost-slat flex items-center justify-between gap-3 bg-timber py-3 pl-4 pr-12 font-medium text-chalk transition-colors hover:bg-timber-soft"
+              className="signpost-slat flex items-center justify-between gap-3 bg-night py-3 pl-4 pr-12 font-medium text-parchment transition-colors hover:bg-night-soft"
             >
               {dict.contact.mapLink}
               <span aria-hidden="true" className="font-semibold text-amber-glow">

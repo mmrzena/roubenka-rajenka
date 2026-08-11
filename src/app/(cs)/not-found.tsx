@@ -8,7 +8,7 @@ export default function NotFound() {
       <p className="text-timber-soft">{cs.notFound.body}</p>
       <Link
         href="/"
-        className="btn-cut bg-terracotta px-6 py-3 font-medium text-chalk transition-colors hover:bg-terracotta-dark"
+        className="btn-cut bg-terracotta px-6 py-3 font-medium text-on-terracotta transition-colors hover:bg-terracotta-dark"
       >
         {cs.notFound.back}
       </Link>

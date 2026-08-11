@@ -1,5 +1,6 @@
 import { Dictionary } from '@/i18n/types'
 import { IMAGES } from '@/lib/site'
+import DuskIllustration from './DuskIllustration'
 import SectionHeading from './SectionHeading'
 import StripeDivider from './StripeDivider'
 
@@ -7,11 +8,11 @@ export default function StorySection({ dict }: { dict: Dictionary }) {
   return (
     <>
       <StripeDivider />
-      <section id="pribeh" className="bg-timber">
+      <section id="pribeh" className="bg-night">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[3fr_2fr] md:items-center md:py-24">
           <div>
             <SectionHeading title={dict.story.title} onDark />
-            <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-chalk-dark/90">
+            <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-parchment/90">
               {dict.story.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
@@ -19,12 +20,11 @@ export default function StorySection({ dict }: { dict: Dictionary }) {
           </div>
 
           <div className="relative mx-auto w-52 max-w-full sm:w-64">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={IMAGES.illustration}
-              alt=""
-              aria-hidden="true"
-              className="-rotate-2 rounded-sm border-8 border-chalk bg-chalk shadow-[0_16px_50px_-12px_rgba(0,0,0,0.6)] transition-transform duration-300 ease-out hover:rotate-0 hover:scale-[1.03]"
+            <DuskIllustration
+              day={IMAGES.illustrationDay}
+              night={IMAGES.illustration}
+              toNight={dict.theme.toNight}
+              toDay={dict.theme.toDay}
             />
             <div aria-hidden="true" className="pointer-events-none absolute -inset-10">
               <span className="firefly" style={{ left: '18%', top: '68%' }} />

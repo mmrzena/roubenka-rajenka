@@ -102,10 +102,7 @@ export default function InquiryForm({ dict }: { dict: Dictionary }) {
       </div>
 
       {mutation.isError && (
-        <p
-          role="alert"
-          className="bg-terracotta/10 px-4 py-3 text-sm text-terracotta-dark"
-        >
+        <p role="alert" className="bg-terracotta/10 px-4 py-3 text-sm text-terracotta-dark">
           {mutation.error.message}
         </p>
       )}
@@ -113,7 +110,7 @@ export default function InquiryForm({ dict }: { dict: Dictionary }) {
       <button
         type="submit"
         disabled={mutation.isPending}
-        className="btn-cut w-full bg-terracotta px-6 py-3.5 font-medium text-chalk transition-colors hover:bg-terracotta-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="btn-cut w-full bg-terracotta px-6 py-3.5 font-medium text-on-terracotta transition-colors hover:bg-terracotta-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {mutation.isPending ? dict.form.sending : dict.form.submit}
       </button>

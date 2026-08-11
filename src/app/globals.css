@@ -2,6 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Palette as RGB channel triplets so Tailwind can apply its /alpha modifiers.
+   timber/chalk/sage-mist flip between day and dusk; night + parchment are the
+   fixed dark-surface pair, so sections that are already dark (Historie, footer,
+   signposts, lightbox) keep light text in both modes. */
+:root {
+  --c-surface: 250 247 240;
+  --c-surface-2: 240 234 220;
+  --c-ink: 43 32 24;
+  --c-ink-soft: 74 58 44;
+  --c-ink-faded: 122 106 88;
+  --c-sage: 126 140 95;
+  --c-sage-dark: 95 107 71;
+  --c-sage-mist: 236 239 227;
+  --c-terracotta: 176 80 44;
+  --c-terracotta-dark: 143 62 32;
+  --c-amber: 229 163 63;
+  --c-night: 43 32 24;
+  --c-night-soft: 74 58 44;
+  --c-parchment: 250 247 240;
+  --c-on-terracotta: 250 247 240;
+}
+
+html[data-dusk] {
+  --c-surface: 22 25 41;
+  --c-surface-2: 40 46 72;
+  --c-ink: 238 232 219;
+  --c-ink-soft: 206 198 184;
+  --c-ink-faded: 152 144 132;
+  --c-sage: 149 165 116;
+  --c-sage-dark: 176 192 142;
+  --c-sage-mist: 35 50 46;
+  --c-terracotta: 224 138 95;
+  --c-terracotta-dark: 240 164 114;
+  --c-on-terracotta: 26 18 8;
+  --c-amber: 240 184 96;
+  --c-night: 48 57 92;
+  --c-night-soft: 64 75 118;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  body * {
+    transition-property: background-color, border-color, color, fill, outline-color;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -29,7 +77,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #e5a33f;
+  outline: 2px solid rgb(var(--c-amber));
   outline-offset: 2px;
 }
 
@@ -59,7 +107,7 @@ input[type='date']::-webkit-date-and-time-value {
 .btn-cut:focus-visible,
 .signpost-slat:focus-visible {
   outline: none;
-  box-shadow: inset 0 0 0 2.5px #e5a33f;
+  box-shadow: inset 0 0 0 2.5px rgb(var(--c-amber));
 }
 
 /* Trail signpost slat with an arrow-pointed end, as on KČT směrovky */
@@ -78,10 +126,10 @@ input[type='date']::-webkit-date-and-time-value {
   height: 26px;
   background: repeating-linear-gradient(
     to bottom,
-    #2b2018 0px,
-    #2b2018 5px,
-    #faf7f0 5px,
-    #faf7f0 9px
+    rgb(var(--c-ink)) 0px,
+    rgb(var(--c-ink)) 5px,
+    rgb(var(--c-surface)) 5px,
+    rgb(var(--c-surface)) 9px
   );
 }
 
@@ -89,10 +137,10 @@ input[type='date']::-webkit-date-and-time-value {
   height: 14px;
   background: repeating-linear-gradient(
     to bottom,
-    #2b2018 0px,
-    #2b2018 5px,
-    #faf7f0 5px,
-    #faf7f0 9px
+    rgb(var(--c-ink)) 0px,
+    rgb(var(--c-ink)) 5px,
+    rgb(var(--c-surface)) 5px,
+    rgb(var(--c-surface)) 9px
   );
 }
 
@@ -155,85 +203,49 @@ input[type='date']::-webkit-date-and-time-value {
   }
 }
 
+html[data-dusk] .firefly {
+  box-shadow: 0 0 16px 6px rgb(var(--c-amber) / 0.65);
+}
+
 .firefly {
   position: absolute;
   width: 5px;
   height: 5px;
   border-radius: 9999px;
-  background: #e5a33f;
-  box-shadow: 0 0 10px 3px rgba(229, 163, 63, 0.5);
+  background: rgb(var(--c-amber));
+  box-shadow: 0 0 10px 3px rgb(var(--c-amber) / 0.5);
   animation: firefly-drift 5.5s ease-in-out infinite;
 }
 
-/* The roubenka stacks itself on load — beams bottom-up alternating sides, then
-   the roof drops in; the wall clip hides each beam until it arrives. Fill mode
-   is backwards, not both, so the finished animation stops holding transform and
-   the Jenga pull-out below can move the beams. */
-@keyframes beam-slide-in {
-  from {
-    transform: translateX(var(--beam-from));
-  }
-  to {
-    transform: translateX(0);
-  }
+/* Only the sun rises on load, along a quarter-ellipse arc: the vertical travel
+   eases out on a sine curve while the horizontal eases in on its cosine
+   counterpart, which is what bends the path instead of cornering it. Both
+   bodies start below the skyline drawn by #logo-sky (the roof line continued
+   right as a horizon), so they stay clipped until they clear it. */
+.logo-lift {
+  transform: translateY(17px);
+  transition: transform 0.62s cubic-bezier(0.61, 1, 0.88, 1);
 }
 
-.logo-beam {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.9, 0.5);
-  animation: beam-slide-in 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) backwards;
+.logo-drift {
+  opacity: 0;
+  transform: translateX(-22px);
+  transition:
+    transform 0.62s cubic-bezier(0.12, 0, 0.39, 0),
+    opacity 0.22s ease;
 }
 
-.logo-beam-1 {
-  --beam-from: -26px;
+.logo-lift.is-up,
+.logo-drift.is-up {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: 0.06s;
 }
 
-.logo-beam-2 {
-  --beam-from: 26px;
-  animation-delay: 0.1s;
-}
-
-.logo-beam-3 {
-  --beam-from: -26px;
-  animation-delay: 0.2s;
-}
-
-@keyframes roof-drop {
-  from {
-    opacity: 0;
-    transform: translateY(-9px);
-  }
-  55% {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.logo-roof {
-  animation: roof-drop 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) 0.42s backwards;
-}
-
-@keyframes roof-fall {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
-  }
-  45% {
-    transform: translate(0.5px, 9px) rotate(-9deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(1px, 16px) rotate(-19deg);
-    opacity: 0;
-  }
-}
-
-.logo-roof-fall {
-  transform-box: fill-box;
-  transform-origin: 25% 100%;
-  animation: roof-fall 0.6s cubic-bezier(0.45, 0, 0.9, 0.55) forwards;
+/* Fireflies belong to the night illustration */
+html:not([data-dusk]) .firefly {
+  opacity: 0;
+  animation: none;
 }
 
 @keyframes lightbox-in {

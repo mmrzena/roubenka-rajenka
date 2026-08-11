@@ -5,14 +5,14 @@ import StripeDivider from './StripeDivider'
 
 export default function Footer({ dict }: { dict: Dictionary }) {
   return (
-    <footer className="bg-timber">
+    <footer className="bg-night">
       <StripeDivider />
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 py-10 sm:flex-row sm:items-center sm:px-6">
         <div>
-          <p className="font-display text-lg font-medium text-chalk">{SITE_NAME}</p>
-          <p className="text-sm text-chalk-dark/70">{dict.footer.tagline}</p>
+          <p className="font-display text-lg font-medium text-parchment">{SITE_NAME}</p>
+          <p className="text-sm text-parchment/70">{dict.footer.tagline}</p>
         </div>
-        <div className="flex items-center gap-6 text-sm text-chalk-dark/70">
+        <div className="flex items-center gap-6 text-sm text-parchment/70">
           <Link
             href={dict.nav.switchHref}
             lang={dict.nav.switchLang}

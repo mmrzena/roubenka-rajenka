@@ -98,6 +98,10 @@ export interface Dictionary {
     successDetail: string
     error: string
   }
+  theme: {
+    toNight: string
+    toDay: string
+  }
   footer: {
     tagline: string
     rights: string

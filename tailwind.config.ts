@@ -1,31 +1,39 @@
 import type { Config } from 'tailwindcss'
 
+const token = (name: string) => `rgb(var(--c-${name}) / <alpha-value>)`
+
 const config: Config = {
   content: ['./src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
         timber: {
-          DEFAULT: '#2B2018',
-          soft: '#4A3A2C',
-          faded: '#7A6A58',
+          DEFAULT: token('ink'),
+          soft: token('ink-soft'),
+          faded: token('ink-faded'),
         },
         chalk: {
-          DEFAULT: '#FAF7F0',
-          dark: '#F0EADC',
+          DEFAULT: token('surface'),
+          dark: token('surface-2'),
         },
         sage: {
-          DEFAULT: '#7E8C5F',
-          dark: '#5F6B47',
-          mist: '#ECEFE3',
+          DEFAULT: token('sage'),
+          dark: token('sage-dark'),
+          mist: token('sage-mist'),
         },
         terracotta: {
-          DEFAULT: '#B0502C',
-          dark: '#8F3E20',
+          DEFAULT: token('terracotta'),
+          dark: token('terracotta-dark'),
         },
         amber: {
-          glow: '#E5A33F',
+          glow: token('amber'),
         },
+        night: {
+          DEFAULT: token('night'),
+          soft: token('night-soft'),
+        },
+        parchment: token('parchment'),
+        'on-terracotta': token('on-terracotta'),
       },
       fontFamily: {
         display: ['var(--font-vollkorn)', 'Georgia', 'serif'],

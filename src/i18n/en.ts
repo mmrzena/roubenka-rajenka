@@ -451,6 +451,10 @@ export const en: Dictionary = {
       'We will get back to you shortly to confirm the dates. A copy went to your email.',
     error: 'The inquiry could not be sent. Please try again, or email us directly.',
   },
+  theme: {
+    toNight: 'Switch to night view',
+    toDay: 'Switch to day view',
+  },
   footer: {
     tagline: 'A timbered cottage with Trosky Castle in view',
     rights: 'Roubenka Rájenka, Kněžnice',

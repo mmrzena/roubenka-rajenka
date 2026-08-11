@@ -1,5 +1,6 @@
 import { Karla, Vollkorn } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import DuskProvider from '@/components/DuskProvider'
 import QueryProvider from '@/providers/QueryProvider'
 import { Locale } from '@/i18n/types'
 import '@/app/globals.css'
@@ -26,7 +27,9 @@ export default function LocaleShell({
   return (
     <html lang={lang} className={`${vollkorn.variable} ${karla.variable}`}>
       <body>
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <DuskProvider>{children}</DuskProvider>
+        </QueryProvider>
         <Analytics />
       </body>
     </html>

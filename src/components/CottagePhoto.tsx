@@ -55,7 +55,7 @@ export default function CottagePhoto({
             role="dialog"
             aria-modal="true"
             aria-label={alt}
-            className="animate-lightbox-in fixed inset-0 z-50 flex items-center justify-center bg-timber/95 p-4"
+            className="animate-lightbox-in fixed inset-0 z-50 flex items-center justify-center bg-night/95 p-4"
             onClick={(event) => {
               if (event.target === event.currentTarget) setOpen(false)
             }}
@@ -66,7 +66,7 @@ export default function CottagePhoto({
               type="button"
               onClick={() => setOpen(false)}
               aria-label={closeLabel}
-              className="absolute right-4 top-4 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
+              className="absolute right-4 top-4 rounded-full bg-parchment/15 p-2.5 text-parchment transition-colors hover:bg-parchment/30"
             >
               <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
                 <path

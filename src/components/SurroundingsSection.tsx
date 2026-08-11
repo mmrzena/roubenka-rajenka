@@ -11,8 +11,8 @@ export default function SurroundingsSection({ dict }: { dict: Dictionary }) {
         <div className="space-y-4">
           {dict.surroundings.groups.map((group, groupIndex) => (
             <details key={group.title} className="group" open={groupIndex === 0}>
-              <summary className="signpost-slat flex cursor-pointer list-none items-center gap-3 bg-timber py-3 pl-4 pr-14 transition-colors hover:bg-timber-soft [&::-webkit-details-marker]:hidden">
-                <h3 className="flex-1 font-display text-xl font-medium text-chalk">
+              <summary className="signpost-slat flex cursor-pointer list-none items-center gap-3 bg-night py-3 pl-4 pr-14 transition-colors hover:bg-night-soft [&::-webkit-details-marker]:hidden">
+                <h3 className="flex-1 font-display text-xl font-medium text-parchment">
                   {group.title}
                 </h3>
                 <svg

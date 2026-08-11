@@ -15,13 +15,20 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
 
   return (
     <header className="sticky top-0 z-50 bg-chalk/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <a href="#top" className="flex items-center gap-2.5">
-          <LogoMark className="h-7 w-7 shrink-0 -translate-y-[1.5px]" />
-          <span className="font-display text-lg font-semibold leading-none text-timber">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6">
+        <div className="flex items-center gap-2.5">
+          <LogoMark
+            className="h-8 w-[40px] shrink-0 -translate-y-[3.6px]"
+            toNight={dict.theme.toNight}
+            toDay={dict.theme.toDay}
+          />
+          <a
+            href="#top"
+            className="font-display text-lg font-semibold leading-none text-timber transition-colors hover:text-terracotta"
+          >
             {SITE_NAME}
-          </span>
-        </a>
+          </a>
+        </div>
 
         <div className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
@@ -45,7 +52,7 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
           </Link>
           <a
             href="#kontakt"
-            className="btn-cut hidden bg-terracotta px-4 py-1.5 text-sm font-medium text-chalk transition-colors [--cut:8px] hover:bg-terracotta-dark sm:block"
+            className="btn-cut hidden bg-terracotta px-4 py-1.5 text-sm font-medium text-on-terracotta transition-colors [--cut:8px] hover:bg-terracotta-dark sm:block"
           >
             {dict.nav.cta}
           </a>

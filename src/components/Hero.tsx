@@ -14,7 +14,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href="#kontakt"
-              className="btn-cut bg-terracotta px-6 py-3 font-medium text-chalk transition-colors hover:bg-terracotta-dark"
+              className="btn-cut bg-terracotta px-6 py-3 font-medium text-on-terracotta transition-colors hover:bg-terracotta-dark"
             >
               {dict.hero.ctaPrimary}
             </a>

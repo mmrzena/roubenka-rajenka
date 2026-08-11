@@ -76,10 +76,7 @@ export default function PricingSection({ dict }: { dict: Dictionary }) {
             <ul className="space-y-2.5">
               {pricing.fees.map((fee) => (
                 <li key={fee} className="flex gap-3 text-timber-soft">
-                  <span
-                    aria-hidden="true"
-                    className="mt-2.5 h-1.5 w-4 shrink-0 bg-sage"
-                  />
+                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-4 shrink-0 bg-sage" />
                   {fee}
                 </li>
               ))}
@@ -100,10 +97,7 @@ export default function PricingSection({ dict }: { dict: Dictionary }) {
             <ul className="space-y-2.5">
               {pricing.cancellation.map((item) => (
                 <li key={item} className="flex gap-3 text-timber-soft">
-                  <span
-                    aria-hidden="true"
-                    className="mt-2.5 h-1.5 w-4 shrink-0 bg-sage"
-                  />
+                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-4 shrink-0 bg-sage" />
                   {item}
                 </li>
               ))}

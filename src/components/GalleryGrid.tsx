@@ -115,7 +115,7 @@ export default function GalleryGrid({ gallery }: { gallery: Dictionary['gallery'
                   decoding="async"
                   className="aspect-[4/3] h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                 />
-                <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-timber/85 to-transparent px-3 pb-2.5 pt-8 text-left text-sm font-medium text-chalk opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-night/85 to-transparent px-3 pb-2.5 pt-8 text-left text-sm font-medium text-parchment opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
                   {item.label}
                 </span>
               </button>
@@ -130,7 +130,7 @@ export default function GalleryGrid({ gallery }: { gallery: Dictionary['gallery'
             role="dialog"
             aria-modal="true"
             aria-label={current.photo.label}
-            className="animate-lightbox-in fixed inset-0 z-50 flex flex-col items-center justify-center bg-timber/95 p-4"
+            className="animate-lightbox-in fixed inset-0 z-50 flex flex-col items-center justify-center bg-night/95 p-4"
             onClick={(event) => {
               if (event.target === event.currentTarget) close()
             }}
@@ -144,9 +144,9 @@ export default function GalleryGrid({ gallery }: { gallery: Dictionary['gallery'
               alt={current.photo.alt}
               className="animate-slide-fade max-h-[86vh] max-w-full object-contain"
             />
-            <p className="mt-4 text-chalk">
+            <p className="mt-4 text-parchment">
               <span className="font-display text-lg">{current.photo.label}</span>
-              <span className="ml-3 text-sm text-chalk/70">
+              <span className="ml-3 text-sm text-parchment/70">
                 {current.index + 1} / {photos.length}
               </span>
             </p>
@@ -155,7 +155,7 @@ export default function GalleryGrid({ gallery }: { gallery: Dictionary['gallery'
               type="button"
               onClick={close}
               aria-label={gallery.closeLabel}
-              className="absolute right-4 top-4 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
+              className="absolute right-4 top-4 rounded-full bg-parchment/15 p-2.5 text-parchment transition-colors hover:bg-parchment/30"
             >
               <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
                 <path
@@ -171,7 +171,7 @@ export default function GalleryGrid({ gallery }: { gallery: Dictionary['gallery'
               type="button"
               onClick={() => goTo(current.index - 1)}
               aria-label={gallery.prevLabel}
-              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-parchment/15 p-2.5 text-parchment transition-colors hover:bg-parchment/30"
             >
               <ArrowIcon direction="left" />
             </button>
@@ -179,7 +179,7 @@ export default function GalleryGrid({ gallery }: { gallery: Dictionary['gallery'
               type="button"
               onClick={() => goTo(current.index + 1)}
               aria-label={gallery.nextLabel}
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-chalk/15 p-2.5 text-chalk transition-colors hover:bg-chalk/30"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-parchment/15 p-2.5 text-parchment transition-colors hover:bg-parchment/30"
             >
               <ArrowIcon direction="right" />
             </button>

@@ -44,6 +44,75 @@ input[type='date']::-webkit-date-and-time-value {
   text-align: left;
 }
 
+/* Joinery frame: the side rules overshoot each corner like the crossed
+   log ends of a roubenka corner joint */
+.joinery-frame {
+  position: relative;
+}
+
+.joinery-frame::before,
+.joinery-frame::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.joinery-frame::before {
+  inset: 0 -7px;
+  border-top: 1.5px solid rgba(43, 32, 24, 0.35);
+  border-bottom: 1.5px solid rgba(43, 32, 24, 0.35);
+}
+
+.joinery-frame::after {
+  inset: -7px 0;
+  border-left: 1.5px solid rgba(43, 32, 24, 0.35);
+  border-right: 1.5px solid rgba(43, 32, 24, 0.35);
+}
+
+/* Solid action buttons get one chamfered corner, like an axe-cut beam end */
+.btn-cut {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--cut, 10px)),
+    calc(100% - var(--cut, 10px)) 100%,
+    0 100%
+  );
+}
+
+/* clip-path swallows the global outline, so the focus ring moves inside */
+.btn-cut:focus-visible,
+summary.signpost-slat:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2.5px #e5a33f;
+}
+
+/* Trail signpost slat with an arrow-pointed end, as on KČT směrovky */
+.signpost-slat {
+  --tip: 20px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--tip)) 0,
+    100% 50%,
+    calc(100% - var(--tip)) 100%,
+    0 100%
+  );
+}
+
+/* KČT trail blaze: white–color–white stripes */
+.blaze {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(
+    to bottom,
+    #fff 0 33%,
+    var(--blaze-color, #b0502c) 33% 67%,
+    #fff 67% 100%
+  );
+  box-shadow: inset 0 0 0 1px rgba(43, 32, 24, 0.25);
+}
+
 .stripe-divider {
   height: 26px;
   background: repeating-linear-gradient(

@@ -31,7 +31,7 @@ export default function InquiryForm({ dict }: { dict: Dictionary }) {
 
   if (mutation.isSuccess) {
     return (
-      <div className="rounded-lg border border-sage/40 bg-sage-mist p-8 text-center">
+      <div className="joinery-frame bg-sage-mist p-8 text-center">
         <p className="font-display text-2xl font-medium text-timber">{dict.form.success}</p>
         <p className="mt-3 text-timber-soft">{dict.form.successDetail}</p>
       </div>
@@ -113,7 +113,7 @@ export default function InquiryForm({ dict }: { dict: Dictionary }) {
       <button
         type="submit"
         disabled={mutation.isPending}
-        className="w-full rounded-full bg-terracotta px-6 py-3.5 font-medium text-chalk transition-colors hover:bg-terracotta-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="btn-cut w-full bg-terracotta px-6 py-3.5 font-medium text-chalk transition-colors hover:bg-terracotta-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {mutation.isPending ? dict.form.sending : dict.form.submit}
       </button>

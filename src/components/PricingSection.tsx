@@ -61,7 +61,7 @@ export default function PricingSection({ dict }: { dict: Dictionary }) {
           <p className="mt-4 text-sm text-timber-faded">{pricing.holidaysNote}</p>
         </div>
 
-        <aside className="h-fit space-y-8 rounded-lg border border-sage/40 bg-sage-mist p-6">
+        <aside className="joinery-frame h-fit space-y-8 bg-sage-mist p-6">
           <div>
             <h3 className="mb-2 font-display text-xl font-medium text-timber">
               {pricing.includesTitle}

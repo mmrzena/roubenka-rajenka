@@ -36,7 +36,7 @@ export default function CottageSection({ dict }: { dict: Dictionary }) {
             openLabel={dict.gallery.openLabel}
             closeLabel={dict.gallery.closeLabel}
           />
-          <div className="mt-6 rounded-lg border border-sage/40 bg-sage-mist p-6">
+          <div className="joinery-frame mt-6 bg-sage-mist p-6">
             <h3 className="mb-5 font-display text-xl font-medium text-timber">
               {dict.cottage.factsTitle}
             </h3>

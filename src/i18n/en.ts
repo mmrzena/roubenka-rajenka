@@ -242,15 +242,15 @@ export const en: Dictionary = {
         title: 'Castles & heritage',
         places: [
           {
+            name: 'Pařez castle ruin',
+            distance: '6 km',
+            description: 'The romantic remains of a rock castle.',
+          },
+          {
             name: 'Storybook Jičín',
             distance: '6.5 km',
             description:
               'The Rumcajs cobbler workshop for kids, the Valdice Gate with its view, an arcaded square with a chateau, the Museum of Play and a famous linden alley.',
-          },
-          {
-            name: 'Pařez castle ruin',
-            distance: '6 km',
-            description: 'The romantic remains of a rock castle.',
           },
           {
             name: 'Trosky Castle',

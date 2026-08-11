@@ -37,13 +37,13 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
           <Link
             href={dict.nav.switchHref}
             lang={dict.nav.switchLang}
-            className="rounded-full border border-timber/20 px-3 py-1.5 text-sm font-medium text-timber-soft transition-colors hover:border-sage hover:text-sage-dark"
+            className="border border-timber/20 px-3 py-1.5 text-sm font-medium text-timber-soft transition-colors hover:border-sage hover:text-sage-dark"
           >
             {dict.nav.switchLabel}
           </Link>
           <a
             href="#kontakt"
-            className="hidden rounded-full bg-terracotta px-4 py-1.5 text-sm font-medium text-chalk transition-colors hover:bg-terracotta-dark sm:block"
+            className="btn-cut hidden bg-terracotta px-4 py-1.5 text-sm font-medium text-chalk transition-colors [--cut:8px] hover:bg-terracotta-dark sm:block"
           >
             {dict.nav.cta}
           </a>

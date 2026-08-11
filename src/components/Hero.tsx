@@ -13,16 +13,16 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           </h1>
           <p className="mt-6 max-w-xl text-lg text-timber-soft">{dict.hero.lead}</p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href="#kontakt"
-              className="rounded-full bg-terracotta px-6 py-3 font-medium text-chalk transition-colors hover:bg-terracotta-dark"
+              className="btn-cut bg-terracotta px-6 py-3 font-medium text-chalk transition-colors hover:bg-terracotta-dark"
             >
               {dict.hero.ctaPrimary}
             </a>
             <a
               href="#chalupa"
-              className="rounded-full border border-timber/25 px-6 py-3 font-medium text-timber transition-colors hover:border-sage hover:text-sage-dark"
+              className="py-3 font-medium text-timber underline decoration-sage decoration-2 underline-offset-[6px] transition-colors hover:text-sage-dark"
             >
               {dict.hero.ctaSecondary}
             </a>

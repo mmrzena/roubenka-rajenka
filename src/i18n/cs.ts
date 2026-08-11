@@ -242,15 +242,15 @@ export const cs: Dictionary = {
         title: 'Hrady, zámky a památky',
         places: [
           {
+            name: 'Zřícenina hradu Pařez',
+            distance: '6 km',
+            description: 'Romantické pozůstatky skalního hradu.',
+          },
+          {
             name: 'Pohádkový Jičín',
             distance: '6,5 km',
             description:
               'Rumcajsova ševcovna, Valdická brána s výhledem, zámek s podloubím, Muzeum hry a lipová alej k Valdštejnské lodžii.',
-          },
-          {
-            name: 'Zřícenina hradu Pařez',
-            distance: '6 km',
-            description: 'Romantické pozůstatky skalního hradu.',
           },
           {
             name: 'Hrad Trosky',

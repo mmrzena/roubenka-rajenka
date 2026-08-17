@@ -1,7 +1,7 @@
 'use client'
 
 import { Locale } from '@/i18n/types'
-import { ECHALUPY_CALENDAR_ID, SITE_URL } from '@/lib/site'
+import { ECHALUPY_CALENDAR_ID } from '@/lib/site'
 import { useDusk } from './DuskProvider'
 
 /* The widget is a third-party iframe, so nothing in globals.css can reach it —
@@ -57,21 +57,16 @@ const DUSK = {
 export default function AvailabilityCalendar({ locale, title }: { locale: Locale; title: string }) {
   const { dusk } = useDusk()
 
-  const layout = {
-    id: ECHALUPY_CALENDAR_ID,
-    pocetMesicu: '6',
-    jazyk: locale === 'cs' ? 'cz' : 'en',
-    jednotky: 'ne',
-  }
-
   const src =
     'https://obsazenost.e-chalupy.cz/kalendar.php?' +
     new URLSearchParams({
-      ...layout,
+      id: ECHALUPY_CALENDAR_ID,
+      pocetMesicu: '6',
       legenda: 'ano',
+      jednotky: 'ne',
       velikost: '1',
+      jazyk: locale === 'cs' ? 'cz' : 'en',
       fontFamily: 'Karla',
-      extCss: `${SITE_URL}/api/calendar?${new URLSearchParams(layout).toString()}`,
       ...(dusk ? DUSK : DAY),
     }).toString()
 

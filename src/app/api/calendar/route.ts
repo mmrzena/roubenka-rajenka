@@ -6,7 +6,7 @@ const UPSTREAM = 'https://obsazenost.e-chalupy.cz/kalendar.php'
    adjacent-month, so nothing in CSS can say "elapsed". The layout it renders is
    read here to turn today's date into the grid coordinates of the days already
    behind us, which CSS can address. */
-const FADE = '{opacity:.28;background-image:none;cursor:default}'
+const FADE = '{opacity:.28;cursor:default}'
 
 const LAYOUT_PARAMS = [
   'id',

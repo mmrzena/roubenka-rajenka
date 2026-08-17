@@ -36,21 +36,32 @@ const PARAM_ALLOWLIST = new Set([
   'legendaText',
 ])
 
-function dayOfMonthInPrague() {
-  const day = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Europe/Prague',
-    day: '2-digit',
-  }).format(new Date())
+function todayInPrague(language: string | null) {
+  const now = new Date()
+  const options = { timeZone: 'Europe/Prague' } as const
 
-  return Number(day)
+  return {
+    day: Number(new Intl.DateTimeFormat('en-CA', { ...options, day: '2-digit' }).format(now)),
+    heading:
+      new Intl.DateTimeFormat(language === 'en' ? 'en-US' : 'cs-CZ', {
+        ...options,
+        month: 'long',
+      }).format(now) +
+      ' ' +
+      new Intl.DateTimeFormat('en-CA', { ...options, year: 'numeric' }).format(now),
+  }
 }
 
-/* Only the first month table is touched — the widget always renders from the
-   current month onwards, so every other table lies wholly in the future. */
-function fadePastDays(html: string, today: number) {
+/* Only the first month table is touched, and only once its heading proves it is
+   the month we are standing in — fading a future month would tell guests that
+   free days are gone. */
+function fadePastDays(html: string, { day: today, heading }: ReturnType<typeof todayInPrague>) {
   const start = html.indexOf("<TABLE class='month")
   const end = html.indexOf('</TABLE>', start)
   if (start === -1 || end === -1) return html
+
+  const month = /month-name'>([^<]+)/.exec(html.slice(start, end))
+  if (month?.[1].trim().toLowerCase() !== heading.toLowerCase()) return html
 
   const faded = html
     .slice(start, end)
@@ -83,7 +94,7 @@ export async function GET(request: NextRequest) {
 
   html = html.replace(/<script[\s\S]*?<\/script>/gi, '').replace('</head>', `${PAST_STYLE}</head>`)
 
-  return new Response(fadePastDays(html, dayOfMonthInPrague()), {
+  return new Response(fadePastDays(html, todayInPrague(params.get('jazyk'))), {
     headers: {
       'content-type': 'text/html; charset=utf-8',
       'cache-control': 'public, max-age=900',

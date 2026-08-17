@@ -5,7 +5,7 @@ export const en: Dictionary = {
   meta: {
     title: 'Roubenka Rájenka – timbered cottage in Bohemian Paradise, near Jičín',
     description:
-      'Rent a traditional Czech log cottage for up to 8 guests in Kněžnice, right in Bohemian Paradise. Garden with a pool, pergola and fire pit, Trosky Castle in view. Ask about your dates.',
+      'Rent a traditional Czech log cottage for up to 9 guests in Kněžnice, right in Bohemian Paradise. Garden with a pool, pergola and fire pit, Trosky Castle in view. Ask about your dates.',
   },
   nav: {
     cottage: 'The cottage',
@@ -22,19 +22,19 @@ export const en: Dictionary = {
   hero: {
     eyebrow: 'Kněžnice · Bohemian Paradise',
     title: 'Roubenka Rájenka',
-    lead: 'A beautiful, cosy log cottage for up to 8 guests in a quiet corner of Kněžnice, close to the forest. Local carpenters built it over a hundred years ago – and the iconic view of Trosky Castle opens up just a few steps from the house.',
+    lead: 'A 100-year-old log cottage in Bohemian Paradise, just a short walk from the forest, offers an escape from the rush of the city. The fenced garden with a pool, pergola and fire pit gives you space to rest, while the surrounding area is made for an active holiday.',
     ctaPrimary: 'Send an inquiry',
     ctaSecondary: 'See the cottage',
     imageAlt: 'Roubenka Rájenka – the cottage with a red roof and a covered porch seating area',
-    facts: ['sleeps up to 8', '2 bedrooms + living room', 'garden with a pool', 'parking on site'],
+    facts: ['sleeps up to 9', '2 bedrooms + living room', 'garden with a pool', 'parking on site'],
   },
   cottage: {
     title: 'A log cottage the way it should be',
     imageAlt: 'The front of the timbered cottage with its red roof and white-limed joints',
     paragraphs: [
-      'The heart of the cottage is the světnice – the traditional living room – dominated by an oak table with four chairs and a bench seating the full house. A fireplace sets the mood, and a comfortable daybed and a smart TV are there for lazy evenings. Also downstairs are a fully equipped kitchen and, off the entry hall, a bathroom with a shower, toilet and washing machine.',
-      'A staircase with hand-cut treads leads up to two attic bedrooms. Each has four beds with brand-new quality mattresses and bedding plus a built-in wardrobe; one also has a baby cot ready.',
-      'The spacious garden offers a pool, a roofed pergola with seating, a gas grill and a classic fire pit for roasting sausages. Children get a climbing frame with a slide, the ever-popular nest swing, two swings, a small climbing wall and a trampoline. Parking is right on the property.',
+      'The ground floor centres on the traditional living room, with a large oak table, bench seating, a fireplace, a daybed and a smart TV. It connects to a fully equipped kitchen with a ceramic hob, microwave, coffee machine, kettle, toaster and everything you need for cooking. The bathroom with a shower, toilet and washing machine is off the entry hall.',
+      'Wooden stairs with hand-cut treads lead up to two attic bedrooms. Each bedroom has four beds with new mattresses, bedding and a built-in wardrobe. A baby cot is also available. The daybed in the living room can be used as one extra sleeping place.',
+      'The fenced garden has a pool, a covered pergola with seating, a gas grill and a fire pit. Children have a climbing frame with a slide, a nest swing, two more swings and a trampoline. Parking is available on the property or right next to it, with plenty of space.',
     ],
     amenitiesTitle: 'What you will find',
     amenities: [
@@ -51,9 +51,10 @@ export const en: Dictionary = {
       'Bed linen and towels included',
       'Baby cot',
       'Parking on site',
+      'Pets by arrangement',
     ],
     facts: [
-      { label: 'Capacity', value: 'up to 8 guests (2× 4 beds)' },
+      { label: 'Capacity', value: 'up to 9 guests (8 beds + convertible couch)' },
       { label: 'Bedrooms', value: '2 attic bedrooms + baby cot' },
       { label: 'Heating', value: 'electric boiler, fireplace' },
       { label: 'Location', value: 'Kněžnice, Bohemian Paradise' },
@@ -63,8 +64,8 @@ export const en: Dictionary = {
   story: {
     title: 'A house that remembers',
     paragraphs: [
-      'Local carpenters built the cottage from pine over a hundred years ago – exactly the way houses were always built in the foothills of Bohemian Paradise. It has everything a true log cottage should: log walls, white-limed joints, massive beams and a hipped roof that shields the house from the north wind.',
-      'The authentic charm of the old house lives on in the preserved low doorways between the rooms. And it takes only a few steps from the cottage for the breathtaking, iconic view of Trosky Castle to open up before you.',
+      'Local carpenters built the cottage from pine over a hundred years ago, the way houses were always built in the foothills of Bohemian Paradise: log walls, white-limed joints, massive beams and a hipped roof to keep the north wind out.',
+      'The doorways between the rooms are still their original height, so taller guests learn to duck. And past the gate it takes only a few steps before Trosky Castle appears on the horizon.',
     ],
   },
   gallery: {
@@ -193,7 +194,7 @@ export const en: Dictionary = {
   },
   surroundings: {
     title: 'Bohemian Paradise on your doorstep',
-    lead: 'Kněžnice is well equipped and easy to reach: the renowned Náš Chléb bakery and both the train and bus stops are within walking distance, so you can arrive comfortably without a car. The countryside is laced with hiking trails and cycling paths, from the Prachov Rocks to storybook Jičín.',
+    lead: 'It is a short walk to the Náš Chléb bakery for your morning bread, and since both trains and buses stop in Kněžnice, you can get here without a car at all. From the cottage, hiking trails and cycle paths lead on to the Prachov Rocks and to storybook Jičín.',
     distanceNote: 'Distances are approximate, measured from the cottage.',
     groups: [
       {
@@ -250,7 +251,7 @@ export const en: Dictionary = {
           {
             name: 'Trosky Castle',
             distance: '8 km',
-            description: 'The iconic symbol of Bohemian Paradise – visible from near the cottage.',
+            description: 'The symbol of Bohemian Paradise, and in view from near the cottage.',
           },
           {
             name: 'Hrubá Skála chateau',
@@ -367,13 +368,18 @@ export const en: Dictionary = {
     title: 'Rates',
     seasonsHead: { season: 'Season', week: 'Week', weekend: 'Weekend' },
     seasons: [
-      { label: 'Summer season', dates: '1 May – 30 Sep', week: 'CZK 25,000', weekend: 'CZK 8,000' },
-      { label: 'Winter season', dates: '1 Dec – 31 Mar', week: 'CZK 17,000', weekend: 'CZK 6,000' },
+      {
+        label: 'Summer season',
+        dates: '1 May – 30 Sep',
+        week: 'CZK 25,000',
+        weekend: 'CZK 10,000',
+      },
+      { label: 'Winter season', dates: '1 Dec – 31 Mar', week: 'CZK 17,000', weekend: 'CZK 7,000' },
       {
         label: 'Off season',
         dates: 'April, October, November',
         week: 'CZK 15,000',
-        weekend: 'CZK 6,000',
+        weekend: 'CZK 7,000',
       },
     ],
     holidaysTitle: 'Holidays',
@@ -392,6 +398,15 @@ export const en: Dictionary = {
       { label: 'Spring half-term', value: 'CZK 23,000', detail: '6 nights' },
     ],
     holidaysNote: 'Prices are for the whole cottage. Shorter stays by arrangement.',
+    shortStaysTitle: 'Shorter stays in the summer season',
+    shortStays: [
+      { nights: '2 nights', value: 'CZK 10,000' },
+      { nights: '3 nights', value: 'CZK 14,000' },
+      { nights: '4 nights', value: 'CZK 17,000' },
+      { nights: '5 nights', value: 'CZK 20,000' },
+      { nights: '6 nights', value: 'CZK 23,000' },
+    ],
+    shortStaysNote: 'Outside the summer season, ask us and we will work the dates out with you.',
     includesTitle: 'Included in the price',
     includes:
       'Bed linen and a towel for every guest, hand towels in the bathroom and WC, and 16 capsules for the Dolce Gusto coffee machine.',
@@ -417,10 +432,11 @@ export const en: Dictionary = {
   },
   contact: {
     title: 'Ask about your dates',
-    lead: 'Send us your dates and group size and we will get back to you with availability and a price. Every booking is confirmed personally – no bots.',
+    lead: 'Send us your dates and the number of guests and we will come back to you with availability and a price. Every booking is confirmed personally, no bots.',
     emailLabel: 'Email',
     phoneLabel: 'Phone',
     addressLabel: 'Address',
+    socialsLabel: 'Follow us',
     calendarTitle: 'Availability',
     mapLink: 'Open the map',
   },
@@ -441,6 +457,7 @@ export const en: Dictionary = {
       { value: '6', label: '6 guests' },
       { value: '7', label: '7 guests' },
       { value: '8', label: '8 guests' },
+      { value: '9', label: '9 guests' },
     ],
     message: 'Message',
     messagePlaceholder: 'Who is coming, anything you want to ask…',

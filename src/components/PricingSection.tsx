@@ -59,6 +59,23 @@ export default function PricingSection({ dict }: { dict: Dictionary }) {
             ))}
           </dl>
           <p className="mt-4 text-sm text-timber-faded">{pricing.holidaysNote}</p>
+
+          <h3 className="mb-4 mt-10 font-display text-xl font-medium text-timber">
+            {pricing.shortStaysTitle}
+          </h3>
+          <dl className="flex flex-wrap gap-x-10 gap-y-5">
+            {pricing.shortStays.map((stay) => (
+              <div key={stay.nights}>
+                <dt className="text-xs font-bold uppercase tracking-[0.15em] text-sage-dark">
+                  {stay.nights}
+                </dt>
+                <dd className="mt-1 font-display text-xl font-medium text-terracotta">
+                  {stay.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-4 text-sm text-timber-faded">{pricing.shortStaysNote}</p>
         </div>
 
         <aside className="h-fit space-y-8 bg-sage-mist p-6">

@@ -7,6 +7,12 @@ export const CONTACT_PHONE_HREF = 'tel:+420776323586'
 export const ADDRESS = 'Kněžnice 40, okres Jičín, Český ráj'
 export const COORDINATES = { latitude: 50.4998356, longitude: 15.322471 }
 
+export const SOCIAL_LINKS = [
+  { name: 'Instagram', href: 'https://www.instagram.com/roubenka_rajenka' },
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61593334466847' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@roubenka_rajenka' },
+] as const
+
 export const IMAGES = {
   hero: '/images/web/hero.jpg',
   illustration: '/images/hero.svg',

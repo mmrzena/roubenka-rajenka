@@ -3,6 +3,7 @@ import { ADDRESS, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, MAP_LINK } f
 import AvailabilityCalendar from './AvailabilityCalendar'
 import InquiryForm from './InquiryForm'
 import SectionHeading from './SectionHeading'
+import SocialLinks from './SocialLinks'
 
 export default function ContactSection({ dict }: { dict: Dictionary }) {
   return (
@@ -48,6 +49,14 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
                   {dict.contact.addressLabel}
                 </dt>
                 <dd className="mt-1 text-lg text-timber">{ADDRESS}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-bold uppercase tracking-[0.15em] text-sage-dark">
+                  {dict.contact.socialsLabel}
+                </dt>
+                <dd className="mt-2">
+                  <SocialLinks className="text-timber-soft [&_a:hover]:text-terracotta" />
+                </dd>
               </div>
             </dl>
 

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Dictionary } from '@/i18n/types'
 import { SITE_NAME } from '@/lib/site'
+import SocialLinks from './SocialLinks'
 import StripeDivider from './StripeDivider'
 
 export default function Footer({ dict }: { dict: Dictionary }) {
@@ -11,6 +12,7 @@ export default function Footer({ dict }: { dict: Dictionary }) {
         <div>
           <p className="font-display text-lg font-medium text-parchment">{SITE_NAME}</p>
           <p className="text-sm text-parchment/70">{dict.footer.tagline}</p>
+          <SocialLinks className="mt-4 text-parchment/70 [&_a:hover]:text-amber-glow" />
         </div>
         <div className="flex items-center gap-6 text-sm text-parchment/70">
           <Link

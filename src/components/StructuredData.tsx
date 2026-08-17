@@ -1,5 +1,5 @@
 import { Dictionary } from '@/i18n/types'
-import { CONTACT_PHONE, SITE_NAME, SITE_URL } from '@/lib/site'
+import { CONTACT_PHONE, SITE_NAME, SITE_URL, SOCIAL_LINKS } from '@/lib/site'
 
 export default function StructuredData({ dict }: { dict: Dictionary }) {
   const data = {
@@ -10,6 +10,7 @@ export default function StructuredData({ dict }: { dict: Dictionary }) {
     description: dict.meta.description,
     url: dict.locale === 'cs' ? SITE_URL : `${SITE_URL}/en`,
     telephone: CONTACT_PHONE,
+    sameAs: SOCIAL_LINKS.map(({ href }) => href),
     image: [
       `${SITE_URL}/images/web/hero.jpg`,
       `${SITE_URL}/images/web/svetnice.jpg`,
@@ -27,7 +28,7 @@ export default function StructuredData({ dict }: { dict: Dictionary }) {
     checkoutTime: '10:00',
     numberOfRooms: 2,
     petsAllowed: true,
-    priceRange: '6 000 – 30 000 Kč',
+    priceRange: '7 000 – 30 000 Kč',
     amenityFeature: dict.cottage.amenities.map((name) => ({
       '@type': 'LocationFeatureSpecification',
       name,

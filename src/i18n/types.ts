@@ -63,6 +63,9 @@ export interface Dictionary {
     holidaysTitle: string
     holidays: { label: string; value: string; detail: string }[]
     holidaysNote: string
+    shortStaysTitle: string
+    shortStays: { nights: string; value: string }[]
+    shortStaysNote: string
     includesTitle: string
     includes: string
     feesTitle: string
@@ -78,6 +81,7 @@ export interface Dictionary {
     emailLabel: string
     phoneLabel: string
     addressLabel: string
+    socialsLabel: string
     calendarTitle: string
     mapLink: string
   }

@@ -5,7 +5,7 @@ export const cs: Dictionary = {
   meta: {
     title: 'Roubenka Rájenka – ubytování v Českém ráji, Kněžnice u Jičína',
     description:
-      'Pronájem roubené chalupy až pro 8 osob v Kněžnici přímo v Českém ráji. Zahrada s bazénem, pergolou a ohništěm, výhled na Trosky kousek od branky. Napište si o volný termín.',
+      'Pronájem roubené chalupy až pro 9 osob v Kněžnici přímo v Českém ráji. Zahrada s bazénem, pergolou a ohništěm, výhled na Trosky kousek od branky. Napište si o volný termín.',
   },
   nav: {
     cottage: 'Chalupa',
@@ -22,19 +22,19 @@ export const cs: Dictionary = {
   hero: {
     eyebrow: 'Kněžnice · Český ráj',
     title: 'Roubenka Rájenka',
-    lead: 'Krásná a útulná roubená chalupa až pro 8 osob v klidné části Kněžnice, kousek od lesa. Postavili ji místní tesaři před více než sto lety – a pár kroků od stavení se otevírá ikonický pohled na Trosky.',
+    lead: 'Více než sto let stará roubenka v Českém ráji, kousek od lesa, nabízí únik od městského shonu. Oplocená zahrada s bazénem, pergolou a ohništěm dává prostor pro odpočinek a okolí pro aktivní dovolenou.',
     ctaPrimary: 'Poslat poptávku',
     ctaSecondary: 'Prohlédnout chalupu',
     imageAlt: 'Roubenka Rájenka – chalupa s červenou střechou a krytým posezením před vchodem',
-    facts: ['až 8 hostů', '2 ložnice + světnice', 'zahrada s bazénem', 'parkování na pozemku'],
+    facts: ['až 9 hostů', '2 ložnice + světnice', 'zahrada s bazénem', 'parkování na pozemku'],
   },
   cottage: {
     title: 'Roubenka, jak má být',
     imageAlt: 'Průčelí roubenky s červenou střechou a bílými spárami',
     paragraphs: [
-      'Srdcem chalupy je světnice, které dominuje dubový stůl se čtyřmi židlemi a lavicí pro plnou obsazenost. Atmosféru dokresluje krb, k odpočinku slouží pohodlná válenda a smart TV. V přízemí na světnici navazuje kompletně vybavená kuchyň a v zádveří koupelna se sprchovým koutem, toaletou a pračkou.',
-      'Chodbou se schodištěm s vykrojenými nášlapy vystoupáte do podkroví ke dvěma ložnicím. V každé z nich jsou čtyři lůžka s novými kvalitními matracemi i lůžkovinami a vestavěná skříň, v jedné je navíc připravená dětská postýlka.',
-      'Na prostorné zahradě najdete bazén, zastřešenou pergolu s posezením, plynový gril i klasické ohniště na opékání špekáčků. Pro děti je připravená prolézačka se skluzavkou, oblíbené hnízdo, dvě houpačky, malá horolezecká stěna a trampolína. Parkuje se pohodlně přímo na pozemku.',
+      'Přízemí tvoří světnice s velkým dubovým stolem, lavicí, krbem, válendou a smart TV. Navazuje na ni plně vybavená kuchyň se sklokeramickou deskou, mikrovlnkou, kávovarem, konvicí, topinkovačem a vším potřebným pro vaření. Koupelna se sprchovým koutem, toaletou a pračkou je v zádveří.',
+      'Do podkroví vedou dřevěné schody s vykrojenými nášlapy. Jsou tu dvě ložnice, v každé najdete čtyři postele s novými matracemi, lůžkoviny a vestavěnou skříň. K dispozici je i dětská postýlka. Ve světnici lze válendu využít jako další místo na spaní.',
+      'Na oplocené zahradě je bazén, zastřešená pergola s posezením, plynový gril a ohniště. Pro děti je připravená prolézačka se skluzavkou, hnízdová houpačka, dvě další houpačky a trampolína. Parkuje se přímo na pozemku, případně hned vedle něj, místa je dostatek.',
     ],
     amenitiesTitle: 'Co je k dispozici',
     amenities: [
@@ -51,9 +51,10 @@ export const cs: Dictionary = {
       'Povlečení a ručníky v ceně',
       'Dětská postýlka',
       'Parkování na pozemku',
+      'Domácí mazlíček po domluvě',
     ],
     facts: [
-      { label: 'Kapacita', value: 'až 8 hostů (2× 4 lůžka)' },
+      { label: 'Kapacita', value: 'až 9 hostů (8 lůžek + rozkládací gauč)' },
       { label: 'Ložnice', value: '2 v podkroví + dětská postýlka' },
       { label: 'Vytápění', value: 'elektrický kotel, krb' },
       { label: 'Poloha', value: 'Kněžnice, Český ráj' },
@@ -63,8 +64,8 @@ export const cs: Dictionary = {
   story: {
     title: 'Dům, který pamatuje',
     paragraphs: [
-      'Chalupu postavili místní tesaři z borového dřeva před více než sto lety – přesně tak, jak se v podhůří Českého ráje stavělo odjakživa. Nechybí roubené stěny, bílé spáry, masivní trámy ani valbová střecha, která dům chrání proti severnímu větru.',
-      'Autentické kouzlo tradičního stavení dotvářejí zachované nižší průchody dveří mezi jednotlivými místnostmi. A stačí udělat jen pár kroků od chalupy, aby se vám otevřel úchvatný ikonický pohled na hrad Trosky.',
+      'Chalupu postavili místní tesaři z borového dřeva před více než sto lety, tak jak se v podhůří Českého ráje stavělo vždycky: roubené stěny, bílé spáry, masivní trámy a valbová střecha, která dům chrání proti severnímu větru.',
+      'Průchody mezi místnostmi zůstaly v původní výšce, takže vyšší hosté občas skloní hlavu. Za brankou pak stačí ujít pár kroků a na obzoru se objeví hrad Trosky.',
     ],
   },
   gallery: {
@@ -193,7 +194,7 @@ export const cs: Dictionary = {
   },
   surroundings: {
     title: 'Český ráj za humny',
-    lead: 'Kněžnice nabízí skvělou vybavenost i dostupnost: v docházkové vzdálenosti je vyhlášená pekárna Náš Chléb i vlaková a autobusová zastávka, takže pohodlně dorazíte i bez auta. Okolí je protkané pěšími trasami a cyklostezkami od Prachovských skal až po pohádkový Jičín.',
+    lead: 'Ráno se dojde pro pečivo do pekárny Náš Chléb, a protože v Kněžnici staví vlak i autobus, dorazíte sem i bez auta. Od chalupy pak vedou pěší trasy a cyklostezky k Prachovským skalám i do pohádkového Jičína.',
     distanceNote: 'Vzdálenosti jsou orientační, měřeno od chalupy.',
     groups: [
       {
@@ -250,7 +251,7 @@ export const cs: Dictionary = {
           {
             name: 'Hrad Trosky',
             distance: '8 km',
-            description: 'Ikonický symbol celého Českého ráje – a od chalupy na dohled.',
+            description: 'Symbol celého Českého ráje a od chalupy na dohled.',
           },
           {
             name: 'Zámek Hrubá Skála',
@@ -367,13 +368,13 @@ export const cs: Dictionary = {
     title: 'Ceník',
     seasonsHead: { season: 'Sezóna', week: 'Týden', weekend: 'Víkend' },
     seasons: [
-      { label: 'Letní sezóna', dates: '1. 5. – 30. 9.', week: '25 000 Kč', weekend: '8 000 Kč' },
-      { label: 'Zimní sezóna', dates: '1. 12. – 31. 3.', week: '17 000 Kč', weekend: '6 000 Kč' },
+      { label: 'Letní sezóna', dates: '1. 5. – 30. 9.', week: '25 000 Kč', weekend: '10 000 Kč' },
+      { label: 'Zimní sezóna', dates: '1. 12. – 31. 3.', week: '17 000 Kč', weekend: '7 000 Kč' },
       {
         label: 'Mimo sezónu',
         dates: 'duben, říjen, listopad',
         week: '15 000 Kč',
-        weekend: '6 000 Kč',
+        weekend: '7 000 Kč',
       },
     ],
     holidaysTitle: 'Svátky a prázdniny',
@@ -384,6 +385,15 @@ export const cs: Dictionary = {
       { label: 'Jarní prázdniny', value: '23 000 Kč', detail: '6 nocí' },
     ],
     holidaysNote: 'Ceny platí za celý objekt. Cena za méně nocí dle dohody.',
+    shortStaysTitle: 'Kratší pobyty v sezóně',
+    shortStays: [
+      { nights: '2 noci', value: '10 000 Kč' },
+      { nights: '3 noci', value: '14 000 Kč' },
+      { nights: '4 noci', value: '17 000 Kč' },
+      { nights: '5 nocí', value: '20 000 Kč' },
+      { nights: '6 nocí', value: '23 000 Kč' },
+    ],
+    shortStaysNote: 'Mimo sezónu se na kratším pobytu domluvíme podle termínu.',
     includesTitle: 'V ceně',
     includes:
       'Povlečení a ručníky pro každého, ručníky na ruce v koupelně a na WC a 16 kapslí do kávovaru Dolce Gusto.',
@@ -409,10 +419,11 @@ export const cs: Dictionary = {
   },
   contact: {
     title: 'Napište si o termín',
-    lead: 'Pošlete nám termín a počet hostů a my se vám co nejdříve ozveme s potvrzením volných dní a cenou. Rezervace potvrzujeme osobně – žádný automat.',
+    lead: 'Napište nám termín a počet hostů a ozveme se vám s potvrzením volných dní i s cenou. Rezervace potvrzujeme osobně, žádný automat.',
     emailLabel: 'E-mail',
     phoneLabel: 'Telefon',
     addressLabel: 'Adresa',
+    socialsLabel: 'Sledujte nás',
     calendarTitle: 'Obsazenost',
     mapLink: 'Otevřít mapu',
   },
@@ -433,6 +444,7 @@ export const cs: Dictionary = {
       { value: '6', label: '6 hostů' },
       { value: '7', label: '7 hostů' },
       { value: '8', label: '8 hostů' },
+      { value: '9', label: '9 hostů' },
     ],
     message: 'Zpráva',
     messagePlaceholder: 'S kým přijedete, na co se chcete zeptat…',

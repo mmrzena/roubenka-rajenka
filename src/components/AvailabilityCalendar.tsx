@@ -58,7 +58,7 @@ export default function AvailabilityCalendar({ locale, title }: { locale: Locale
   const { dusk } = useDusk()
 
   const src =
-    'https://obsazenost.e-chalupy.cz/kalendar.php?' +
+    '/api/calendar?' +
     new URLSearchParams({
       id: ECHALUPY_CALENDAR_ID,
       pocetMesicu: '6',
@@ -70,5 +70,13 @@ export default function AvailabilityCalendar({ locale, title }: { locale: Locale
       ...(dusk ? DUSK : DAY),
     }).toString()
 
-  return <iframe src={src} title={title} loading="lazy" className="block h-80 w-full bg-chalk" />
+  return (
+    <iframe
+      src={src}
+      title={title}
+      loading="lazy"
+      sandbox=""
+      className="block h-80 w-full bg-chalk"
+    />
+  )
 }

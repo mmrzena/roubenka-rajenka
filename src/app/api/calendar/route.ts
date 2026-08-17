@@ -2,39 +2,25 @@ import { NextRequest } from 'next/server'
 
 const UPSTREAM = 'https://obsazenost.e-chalupy.cz/kalendar.php'
 
-/* The widget marks a day free, occupied or adjacent-month and nothing else, so
-   yesterday looks as bookable as tomorrow. Serving its markup from our own
-   origin is the only way to reach those cells: cross-origin CSS cannot. */
-const PAST_STYLE =
-  '<style>.month td.day-past{opacity:.28;cursor:default}' +
-  '.month td.day-past.z,.month td.day-past.k{background-image:none}</style>'
+/* The widget takes an extCss stylesheet but marks a day only free, occupied or
+   adjacent-month, so nothing in CSS can say "elapsed". The layout it renders is
+   read here to turn today's date into the grid coordinates of the days already
+   behind us, which CSS can address. */
+const FADE = '{opacity:.28;background-image:none;cursor:default}'
 
-const PARAM_ALLOWLIST = new Set([
+const LAYOUT_PARAMS = [
   'id',
   'pocetMesicu',
-  'legenda',
-  'jednotky',
-  'velikost',
   'jazyk',
-  'fontFamily',
-  'pozadi',
-  'kalendarPozadi',
-  'kalendarText',
-  'ramecek',
-  'mesicPozadi',
-  'mesicText',
-  'dnyPozadi',
-  'dnyText',
-  'volnoPozadi',
-  'volnoText',
-  'obsazenoPozadi',
-  'obsazenoText',
-  'castecnePozadi',
-  'castecneText',
-  'neaktivniDnyPozadi',
-  'neaktivniDnyText',
-  'legendaText',
-])
+  'jednotky',
+  'ctvrtleti',
+  'vybraneMesice',
+  'idJednotky',
+]
+
+const MONTH_TABLE = /<TABLE class='month[\s\S]*?<\/TABLE>/gi
+const TABLE_ROW = /<TR[^>]*>([\s\S]*?)<\/TR>/gi
+const ROW_CELL = /<TD([^>]*)>([\s\S]*?)<\/TD>/gi
 
 function todayInPrague(language: string | null) {
   const now = new Date()
@@ -52,52 +38,62 @@ function todayInPrague(language: string | null) {
   }
 }
 
-/* Only the first month table is touched, and only once its heading proves it is
-   the month we are standing in — fading a future month would tell guests that
-   free days are gone. */
-function fadePastDays(html: string, { day: today, heading }: ReturnType<typeof todayInPrague>) {
-  const start = html.indexOf("<TABLE class='month")
-  const end = html.indexOf('</TABLE>', start)
-  if (start === -1 || end === -1) return html
+/* The month is found by its heading rather than by position: fading the wrong
+   table would tell guests that free days are gone. */
+function pastDaySelectors(html: string, today: ReturnType<typeof todayInPrague>) {
+  const months = html.match(MONTH_TABLE) ?? []
+  const month = months.findIndex(
+    (table) =>
+      /month-name'>([^<]+)/.exec(table)?.[1].trim().toLowerCase() === today.heading.toLowerCase(),
+  )
+  if (month === -1) return []
 
-  const month = /month-name'>([^<]+)/.exec(html.slice(start, end))
-  if (month?.[1].trim().toLowerCase() !== heading.toLowerCase()) return html
+  const selectors: string[] = []
 
-  const faded = html
-    .slice(start, end)
-    .replace(/<TD class='([^']*)'([^>]*)>(\d+)<\/TD>/g, (cell, classes, rest, day) =>
-      classes.includes('day-shdw') || Number(day) >= today
-        ? cell
-        : `<TD class='${classes} day-past'${rest}>${day}</TD>`,
-    )
+  Array.from(months[month].matchAll(TABLE_ROW)).forEach((row, rowIndex) => {
+    let column = 0
 
-  return html.slice(0, start) + faded + html.slice(end)
+    for (const [, attributes, contents] of Array.from(row[1].matchAll(ROW_CELL))) {
+      column += 1
+
+      const day = Number(contents.trim())
+      const classes = /class='([^']*)'/.exec(attributes)?.[1] ?? ''
+      if (!day || classes.includes('day-shdw') || day >= today.day) continue
+
+      selectors.push(
+        `#obal table.month:nth-of-type(${month + 1}) tr:nth-child(${rowIndex + 1}) td:nth-child(${column})`,
+      )
+    }
+  })
+
+  return selectors
 }
 
 export async function GET(request: NextRequest) {
   const params = new URLSearchParams()
-  request.nextUrl.searchParams.forEach((value, key) => {
-    if (PARAM_ALLOWLIST.has(key)) params.set(key, value)
-  })
+  for (const key of LAYOUT_PARAMS) {
+    const value = request.nextUrl.searchParams.get(key)
+    if (value) params.set(key, value)
+  }
 
-  const upstream = `${UPSTREAM}?${params.toString()}`
+  const css = (body: string) =>
+    new Response(body, {
+      headers: {
+        'content-type': 'text/css; charset=utf-8',
+        'cache-control': 'public, max-age=900',
+      },
+    })
 
   let html: string
   try {
-    const response = await fetch(upstream, { cache: 'no-store' })
+    const response = await fetch(`${UPSTREAM}?${params.toString()}`, { cache: 'no-store' })
     if (!response.ok) throw new Error(`e-chalupy responded ${response.status}`)
     html = await response.text()
   } catch {
-    /* An unstyled calendar beats an empty box. */
-    return Response.redirect(upstream, 302)
+    return css('')
   }
 
-  html = html.replace(/<script[\s\S]*?<\/script>/gi, '').replace('</head>', `${PAST_STYLE}</head>`)
+  const selectors = pastDaySelectors(html, todayInPrague(params.get('jazyk')))
 
-  return new Response(fadePastDays(html, todayInPrague(params.get('jazyk'))), {
-    headers: {
-      'content-type': 'text/html; charset=utf-8',
-      'cache-control': 'public, max-age=900',
-    },
-  })
+  return css(selectors.length ? `${selectors.join(',')}${FADE}` : '')
 }

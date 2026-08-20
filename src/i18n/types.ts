@@ -14,6 +14,8 @@ export interface Dictionary {
     pricing: string
     contact: string
     cta: string
+    menuOpen: string
+    menuClose: string
     switchLabel: string
     switchHref: string
     switchLang: string

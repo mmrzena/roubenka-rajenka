@@ -15,6 +15,8 @@ export const en: Dictionary = {
     pricing: 'Rates',
     contact: 'Contact',
     cta: 'Send an inquiry',
+    menuOpen: 'Open menu',
+    menuClose: 'Close menu',
     switchLabel: 'Česky',
     switchHref: '/',
     switchLang: 'cs',

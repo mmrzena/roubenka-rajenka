@@ -15,6 +15,8 @@ export const cs: Dictionary = {
     pricing: 'Ceník',
     contact: 'Kontakt',
     cta: 'Poslat poptávku',
+    menuOpen: 'Otevřít menu',
+    menuClose: 'Zavřít menu',
     switchLabel: 'English',
     switchHref: '/en',
     switchLang: 'en',

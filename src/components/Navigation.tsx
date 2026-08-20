@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Dictionary } from '@/i18n/types'
 import { SITE_NAME } from '@/lib/site'
 import LogoMark from './LogoMark'
+import MobileMenu from './MobileMenu'
 
 export default function Navigation({ dict }: { dict: Dictionary }) {
   const links = [
@@ -56,6 +57,12 @@ export default function Navigation({ dict }: { dict: Dictionary }) {
           >
             {dict.nav.cta}
           </a>
+          <MobileMenu
+            links={links}
+            cta={dict.nav.cta}
+            openLabel={dict.nav.menuOpen}
+            closeLabel={dict.nav.menuClose}
+          />
         </div>
       </nav>
       <div aria-hidden="true" className="stripe-divider-thin" />
